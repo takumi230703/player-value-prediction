@@ -2,7 +2,9 @@ import pandas as pd
 from sklearn.model_selection import train_test_split
 from sklearn.tree import DecisionTreeRegressor
 from sklearn.preprocessing import OneHotEncoder
-from sklearn.metrics import mean_absolute_error
+from joblib import Parallel, delayed
+import joblib
+
 
 soccer_player_path = "/Users/user/player-value-prediction/Back-end/ml/data/2022_2023_football_summer_transfers.csv"
 
@@ -23,6 +25,9 @@ def train_model():
     OH_encoder = OneHotEncoder(handle_unknown="ignore", sparse_output=False)
     OH_X_train = pd.DataFrame(OH_encoder.fit_transform(train_X[features]))
     OH_X_valid  = pd.DataFrame(OH_encoder.transform(val_X[features]))
+    joblib.dump(OH_encoder, "one_hot_encoder.pkl")
+
+
 
     OH_X_train.index = train_X.index
     OH_X_valid .index = val_X.index
@@ -30,20 +35,14 @@ def train_model():
     OH_X_train.columns = OH_X_train.columns.astype(str)
     OH_X_valid.columns = OH_X_valid.columns.astype(str)
 
-    soccer_model = DecisionTreeRegressor(random_state=0)
-
-    soccer_model.fit(OH_X_train, train_y)
-
-    val_predictions = soccer_model.predict(OH_X_valid)
-    val_mae = mean_absolute_error(val_predictions, val_y)
-    print(val_mae)
-
     soccer_model = DecisionTreeRegressor(max_leaf_nodes=500, random_state=1)
+
     soccer_model.fit(OH_X_train, train_y)
-    val_predictions = soccer_model.predict(OH_X_valid)
-    val_mae = mean_absolute_error(val_predictions, val_y)
-    print(val_mae)
-    
+
+    joblib.dump(soccer_model, "soccer_model.pkl")
+
+
+
 
 if __name__ == "__main__":
     train_model()
