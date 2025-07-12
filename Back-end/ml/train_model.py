@@ -2,7 +2,6 @@ import pandas as pd
 from sklearn.model_selection import train_test_split
 from sklearn.tree import DecisionTreeRegressor
 from sklearn.preprocessing import OneHotEncoder
-from joblib import Parallel, delayed
 import joblib
 
 
