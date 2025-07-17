@@ -64,7 +64,8 @@ def card():
     OH_data_frame.index = data_frame.index
     OH_data_frame.columns = OH_data_frame.columns.astype(str)
 
-    prediction = soccer_model.predict(OH_data_frame)
+    prediction = soccer_model.predict(OH_data_frame)[0]
+    
 
 
     return render_template("card.html", first_name=first_name, last_name=last_name, picture_url=picture_url, prediction=prediction)
