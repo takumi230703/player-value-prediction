@@ -1,8 +1,10 @@
 import pandas as pd
 from sklearn.preprocessing import OneHotEncoder
 from flask import Flask, render_template, request
+import MySQLdb
 import joblib
 import os
+
 
 BASE_DIR = os.path.dirname(os.path.abspath(__file__))
 TEMPLATE_DIR = os.path.join(BASE_DIR, "../Front-end/templates")
@@ -12,21 +14,58 @@ STATIC_PATH = os.path.join(BASE_DIR, "../Front-end/static")
 app = Flask(__name__, template_folder=TEMPLATE_DIR, static_folder=STATIC_PATH)
 
 
+
+
+
 @app.route("/")
 def index():
     return render_template("index.html")
+
 
 @app.route("/profile")
 def profile():
     return render_template("profile.html")
 
+@app.route("/display")
+def display():
+    db = MySQLdb.connect(host="localhost", user="root", password="", database="playerdb")
+    cursor = db.cursor()
+    
+    cursor.execute("SELECT * FROM players")
+    
+    players = cursor.fetchall()
+    
+    cursor.close()
+    db.close()
+    
+    return render_template("display.html", players=players)
+
+@app.route("/delete/<int:player_id>")
+def delete(player_id):
+    db = MySQLdb.connect(host="localhost", user="root", password="", database="playerdb")
+    cursor = db.cursor()
+    
+    
+    cursor.execute("SELECT * FROM players WHERE id=%s", (player_id, ))
+    player = cursor.fetchone()
+    cursor.execute("DELETE FROM players WHERE id=%s", (player_id, ))
+    db.commit()
+    
+    cursor.close()
+    db.close()
+    
+    return render_template("delete.html", player=player)
+
 
 @app.route("/card", methods=["POST"])
 def card():
     soccer_model = joblib.load("soccer_model.pkl")
+    db = MySQLdb.connect(host="localhost", user="root", password="", database="playerdb")
+    cursor = db.cursor()
 
     first_name = request.form["First_Name"]
     last_name = request.form["Last_Name"]
+    name = first_name + " " + last_name
 
 
     picture = request.files["Picture"]
@@ -46,6 +85,18 @@ def card():
     country_to = request.form["Country-to"]
     league_to = request.form["league-to"]
     club_to = request.form["Club-to"]
+    
+    cursor.execute("INSERT INTO players (name, position, age, country_from, league_from,club_from, country_to, league_to, club_to, photo_url)VALUES(%s, %s, %s, %s, %s, %s, %s, %s, %s, %s)",
+        (name, position, age, country_from, league_from, club_from,  country_to, league_to, club_to, picture_url)
+    )
+    
+    db.commit()
+    
+    
+    cursor.close()
+    db.close()
+    
+    
 
     data_frame = pd.DataFrame({
         "position": [position],
