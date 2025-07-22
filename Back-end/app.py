@@ -1,5 +1,4 @@
 import pandas as pd
-from sklearn.preprocessing import OneHotEncoder
 from flask import Flask, render_template, request
 import MySQLdb
 import joblib
@@ -73,6 +72,11 @@ def update(player_id):
         league_to = request.form["league-to"]
         club_to = request.form["Club-to"]
         picture = request.files["Picture"]
+        
+        if not (name or position or age or country_from or league_from or club_from or country_to or league_to or club_to):
+            return render_template("exception.html")
+        if (club_from == club_to):
+            return render_template("exception.html")
         
         if picture and picture.filename:
             picture_path = os.path.join(STATIC_PATH,"uploads", picture.filename)
@@ -148,6 +152,12 @@ def card():
     country_to = request.form["Country-to"]
     league_to = request.form["league-to"]
     club_to = request.form["Club-to"]
+    
+    if not (first_name or last_name or position or age or country_from or league_from or club_from or country_to or league_to or club_to):
+        return render_template("exception.html")
+    if (club_from == club_to):
+        return render_template("exception.html")
+    
         
     data_frame = pd.DataFrame({
         "position": [position],
