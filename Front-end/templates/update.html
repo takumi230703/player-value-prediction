@@ -1,0 +1,834 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.1.3/dist/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+
+    <title>Player Information</title>
+  </head>
+  <body>
+    <header class="m-5 text-center">
+        <div class="col-4">
+            <h1>Player Information</h1>
+            <hr>
+        </div>
+    </header>
+    <h2 class="mt-4 border-bottom pb-2">Basic Info</h2>
+    <main>
+        <form action="/update/{{ player[0]}}" method="POST" enctype="multipart/form-data">
+            <div class="container form-group">
+                <div class="row">
+                    <div class="col">
+                        <h3>Name:</h3>
+                    </div>
+                    <div class="col">
+                        <input type="text" class="form-control" name="Name" id="InputName" placeholder="name">
+                    </div>
+                </div>
+                <div class="row mt-5">
+                    <div class="col">
+                        <h3>Position:</h3>
+                    </div>
+                    <div class="col">
+                        <select class="form-select" name="Position" aria-label="Default select example">
+                            <option selected>player's position</option>
+                            <option value="Centre-Forward" >Centre-Forward</option>
+                            <option value="Right Winger">Right Winger</option>
+                            <option value="Left Winger">Left Winger</option>
+                            <option value="Attacking Midfield">Attacking Midfield</option>
+                            <option value="Central Midfield">Central Midfield</option>
+                            <option value="Defensive Midfield">Defensive Midfield</option>
+                            <option value="Centre-Back">Centre-Back</option>
+                            <option value="Left-Back">Left-Back</option>
+                            <option value="Right-Back">Right-Back</option>
+                            <option value="Goalkeeper">Goalkeeper</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="row mt-5">
+                    <div class="col">
+                        <h3>age:</h3>
+                    </div>
+                    <div class="col">
+                        <select class="form-select" name="age" aria-label="Select player's age" name="age">
+                            <option selected>player's age</option>
+                            <option value="15">15</option>
+                            <option value="16">16</option>
+                            <option value="17">17</option>
+                            <option value="18">18</option>
+                            <option value="19">19</option>
+                            <option value="20">20</option>
+                            <option value="21">21</option>
+                            <option value="22">22</option>
+                            <option value="23">23</option>
+                            <option value="24">24</option>
+                            <option value="25">25</option>
+                            <option value="26">26</option>
+                            <option value="27">27</option>
+                            <option value="28">28</option>
+                            <option value="29">29</option>
+                            <option value="30">30</option>
+                            <option value="31">31</option>
+                            <option value="32">32</option>
+                            <option value="33">33</option>
+                            <option value="34">34</option>
+                            <option value="35">35</option>
+                            <option value="36">36</option>
+                            <option value="37">37</option>
+                            <option value="38">38</option>
+                            <option value="39">39</option>
+                            <option value="40">40</option>
+                            <option value="41">41</option>
+                            <option value="42">42</option>
+                            <option value="43">43</option>
+                            <option value="44">44</option>
+                            <option value="45">45</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+            <h2 class="mt-4 border-bottom pb-2">Current Team Info</h2>
+            <div class="container form-group">
+                <div class="row mt-5">
+                    <div class="col">
+                        <h3>Country-from:</h3>
+                    </div>
+                    <div class="col">
+                        <select class="form-select" name="Country-from" aria-label="Select player's country" name="country">
+                            <option selected>country that player was playing</option>
+                            <option value="Afghanistan">Afghanistan</option>
+                            <option value="Albania">Albania</option>
+                            <option value="Algeria">Algeria</option>
+                            <option value="Andorra">Andorra</option>
+                            <option value="Angola">Angola</option>
+                            <option value="Antigua and Barbuda">Antigua and Barbuda</option>
+                            <option value="Argentina">Argentina</option>
+                            <option value="Armenia">Armenia</option>
+                            <option value="Australia">Australia</option>
+                            <option value="Austria">Austria</option>
+                            <option value="Azerbaijan">Azerbaijan</option>
+                            <option value="Bahamas">Bahamas</option>
+                            <option value="Bahrain">Bahrain</option>
+                            <option value="Bangladesh">Bangladesh</option>
+                            <option value="Barbados">Barbados</option>
+                            <option value="Belarus">Belarus</option>
+                            <option value="Belgium">Belgium</option>
+                            <option value="Belize">Belize</option>
+                            <option value="Benin">Benin</option>
+                            <option value="Bhutan">Bhutan</option>
+                            <option value="Bolivia">Bolivia</option>
+                            <option value="Bosnia and Herzegovina">Bosnia and Herzegovina</option>
+                            <option value="Botswana">Botswana</option>
+                            <option value="Brazil">Brazil</option>
+                            <option value="Brunei">Brunei</option>
+                            <option value="Bulgaria">Bulgaria</option>
+                            <option value="Burkina Faso">Burkina Faso</option>
+                            <option value="Burundi">Burundi</option>
+                            <option value="Cabo Verde">Cabo Verde</option>
+                            <option value="Cambodia">Cambodia</option>
+                            <option value="Cameroon">Cameroon</option>
+                            <option value="Canada">Canada</option>
+                            <option value="Central African Republic">Central African Republic</option>
+                            <option value="Chad">Chad</option>
+                            <option value="Chile">Chile</option>
+                            <option value="China">China</option>
+                            <option value="Colombia">Colombia</option>
+                            <option value="Comoros">Comoros</option>
+                            <option value="Congo (Congo-Brazzaville)">Congo (Congo-Brazzaville)</option>
+                            <option value="Costa Rica">Costa Rica</option>
+                            <option value="Croatia">Croatia</option>
+                            <option value="Cuba">Cuba</option>
+                            <option value="Cyprus">Cyprus</option>
+                            <option value="Czech">Czech</option>
+                            <option value="Democratic Republic of the Congo">Democratic Republic of the Congo</option>
+                            <option value="Denmark">Denmark</option>
+                            <option value="Djibouti">Djibouti</option>
+                            <option value="Dominica">Dominica</option>
+                            <option value="Dominican Republic">Dominican Republic</option>
+                            <option value="Ecuador">Ecuador</option>
+                            <option value="Egypt">Egypt</option>
+                            <option value="El Salvador">El Salvador</option>
+                            <option value="England">England</option>
+                            <option value="Equatorial Guinea">Equatorial Guinea</option>
+                            <option value="Eritrea">Eritrea</option>
+                            <option value="Estonia">Estonia</option>
+                            <option value="Eswatini (fmr. Swaziland)">Eswatini (fmr. Swaziland)</option>
+                            <option value="Ethiopia">Ethiopia</option>
+                            <option value="Fiji">Fiji</option>
+                            <option value="Finland">Finland</option>
+                            <option value="France">France</option>
+                            <option value="Gabon">Gabon</option>
+                            <option value="Gambia">Gambia</option>
+                            <option value="Georgia">Georgia</option>
+                            <option value="Germany">Germany</option>
+                            <option value="Ghana">Ghana</option>
+                            <option value="Greece">Greece</option>
+                            <option value="Grenada">Grenada</option>
+                            <option value="Guatemala">Guatemala</option>
+                            <option value="Guinea">Guinea</option>
+                            <option value="Guinea-Bissau">Guinea-Bissau</option>
+                            <option value="Guyana">Guyana</option>
+                            <option value="Haiti">Haiti</option>
+                            <option value="Holy See">Holy See</option>
+                            <option value="Honduras">Honduras</option>
+                            <option value="Hungary">Hungary</option>
+                            <option value="Iceland">Iceland</option>
+                            <option value="India">India</option>
+                            <option value="Indonesia">Indonesia</option>
+                            <option value="Iran">Iran</option>
+                            <option value="Iraq">Iraq</option>
+                            <option value="Ireland">Ireland</option>
+                            <option value="Israel">Israel</option>
+                            <option value="Italy">Italy</option>
+                            <option value="Jamaica">Jamaica</option>
+                            <option value="Japan">Japan</option>
+                            <option value="Jordan">Jordan</option>
+                            <option value="Kazakhstan">Kazakhstan</option>
+                            <option value="Kenya">Kenya</option>
+                            <option value="Kiribati">Kiribati</option>
+                            <option value="Korea, South">Korea, South</option>
+                            <option value="Kuwait">Kuwait</option>
+                            <option value="Kyrgyzstan">Kyrgyzstan</option>
+                            <option value="Laos">Laos</option>
+                            <option value="Latvia">Latvia</option>
+                            <option value="Lebanon">Lebanon</option>
+                            <option value="Lesotho">Lesotho</option>
+                            <option value="Liberia">Liberia</option>
+                            <option value="Libya">Libya</option>
+                            <option value="Liechtenstein">Liechtenstein</option>
+                            <option value="Lithuania">Lithuania</option>
+                            <option value="Luxembourg">Luxembourg</option>
+                            <option value="Madagascar">Madagascar</option>
+                            <option value="Malawi">Malawi</option>
+                            <option value="Malaysia">Malaysia</option>
+                            <option value="Maldives">Maldives</option>
+                            <option value="Mali">Mali</option>
+                            <option value="Malta">Malta</option>
+                            <option value="Marshall Islands">Marshall Islands</option>
+                            <option value="Mauritania">Mauritania</option>
+                            <option value="Mauritius">Mauritius</option>
+                            <option value="Mexico">Mexico</option>
+                            <option value="Micronesia">Micronesia</option>
+                            <option value="Moldova">Moldova</option>
+                            <option value="Monaco">Monaco</option>
+                            <option value="Mongolia">Mongolia</option>
+                            <option value="Montenegro">Montenegro</option>
+                            <option value="Morocco">Morocco</option>
+                            <option value="Mozambique">Mozambique</option>
+                            <option value="Myanmar (formerly Burma)">Myanmar (formerly Burma)</option>
+                            <option value="Namibia">Namibia</option>
+                            <option value="Nauru">Nauru</option>
+                            <option value="Nepal">Nepal</option>
+                            <option value="Netherlands">Netherlands</option>
+                            <option value="New Zealand">New Zealand</option>
+                            <option value="Nicaragua">Nicaragua</option>
+                            <option value="Niger">Niger</option>
+                            <option value="Nigeria">Nigeria</option>
+                            <option value="North Korea">North Korea</option>
+                            <option value="North Macedonia">North Macedonia</option>
+                            <option value="Norway">Norway</option>
+                            <option value="Oman">Oman</option>
+                            <option value="Pakistan">Pakistan</option>
+                            <option value="Palau">Palau</option>
+                            <option value="Palestine State">Palestine State</option>
+                            <option value="Panama">Panama</option>
+                            <option value="Papua New Guinea">Papua New Guinea</option>
+                            <option value="Paraguay">Paraguay</option>
+                            <option value="Peru">Peru</option>
+                            <option value="Philippines">Philippines</option>
+                            <option value="Poland">Poland</option>
+                            <option value="Portugal">Portugal</option>
+                            <option value="Qatar">Qatar</option>
+                            <option value="Romania">Romania</option>
+                            <option value="Russia">Russia</option>
+                            <option value="Rwanda">Rwanda</option>
+                            <option value="Saint Kitts and Nevis">Saint Kitts and Nevis</option>
+                            <option value="Saint Lucia">Saint Lucia</option>
+                            <option value="Saint Vincent and the Grenadines">Saint Vincent and the Grenadines</option>
+                            <option value="Samoa">Samoa</option>
+                            <option value="San Marino">San Marino</option>
+                            <option value="Sao Tome and Principe">Sao Tome and Principe</option>
+                            <option value="Saudi Arabia">Saudi Arabia</option>
+                            <option value="Scotland">Scotland</option>
+                            <option value="Senegal">Senegal</option>
+                            <option value="Serbia">Serbia</option>
+                            <option value="Seychelles">Seychelles</option>
+                            <option value="Sierra Leone">Sierra Leone</option>
+                            <option value="Singapore">Singapore</option>
+                            <option value="Slovakia">Slovakia</option>
+                            <option value="Slovenia">Slovenia</option>
+                            <option value="Solomon Islands">Solomon Islands</option>
+                            <option value="Somalia">Somalia</option>
+                            <option value="South Africa">South Africa</option>
+                            <option value="South Sudan">South Sudan</option>
+                            <option value="Spain">Spain</option>
+                            <option value="Sri Lanka">Sri Lanka</option>
+                            <option value="Sudan">Sudan</option>
+                            <option value="Suriname">Suriname</option>
+                            <option value="Sweden">Sweden</option>
+                            <option value="Switzerland">Switzerland</option>
+                            <option value="Syria">Syria</option>
+                            <option value="Tajikistan">Tajikistan</option>
+                            <option value="Tanzania">Tanzania</option>
+                            <option value="Thailand">Thailand</option>
+                            <option value="Timor-Leste">Timor-Leste</option>
+                            <option value="Togo">Togo</option>
+                            <option value="Tonga">Tonga</option>
+                            <option value="Trinidad and Tobago">Trinidad and Tobago</option>
+                            <option value="Tunisia">Tunisia</option>
+                            <option value="Turkey">Turkey</option>
+                            <option value="Turkmenistan">Turkmenistan</option>
+                            <option value="Tuvalu">Tuvalu</option>
+                            <option value="Uganda">Uganda</option>
+                            <option value="Ukraine">Ukraine</option>
+                            <option value="United Arab Emirates">United Arab Emirates</option>
+                            <option value="United States">United States</option>
+                            <option value="Uruguay">Uruguay</option>
+                            <option value="Uzbekistan">Uzbekistan</option>
+                            <option value="Vanuatu">Vanuatu</option>
+                            <option value="Vatican City">Vatican City</option>
+                            <option value="Venezuela">Venezuela</option>
+                            <option value="Vietnam">Vietnam</option>
+                            <option value="Wales">Wales</option>
+                            <option value="Yemen">Yemen</option>
+                            <option value="Zambia">Zambia</option>
+                            <option value="Zimbabwe">Zimbabwe</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="row mt-5">
+                    <div class="col">
+                        <h3>league-from:</h3>
+                    </div>
+                    <div class="col">
+                        <select class="form-select" name="league-from" aria-label="Select league">
+                            <option selected>league that player was playing</option>
+                            <option value="Premier League">Premier League</option>
+                            <option value="LaLiga">LaLiga</option>
+                            <option value="Serie A">Serie A</option>
+                            <option value="Bundesliga">Bundesliga</option>
+                            <option value="Ligue 1">Ligue 1</option>
+                            <option value="Eredivisie">Eredivisie</option>
+                            <option value="Liga Portugal">Liga Portugal</option>
+                            <option value="Jupiler Pro League">Jupiler Pro League</option>
+                            <option value="Süper Lig">Süper Lig</option>
+                            <option value="MLS">MLS</option>
+                            <option value="Scottish Premiership">Scottish Premiership</option>
+                            <option value="Championship">Championship</option>
+                            <option value="Super League 1">Super League 1 (Greece)</option>
+                            <option value="Premier Liga">Russian Premier Liga</option>
+                            <option value="Premier Liga Ukraine">Ukrainian Premier Liga</option>
+                            <option value="Fortuna Liga">Czech Fortuna Liga</option>
+                            <option value="Austria Bundesliga">Austria Bundesliga</option>
+                            <option value="Swiss Super League">Swiss Super League</option>
+                            <option value="Série A">Brazil Série A</option>
+                            <option value="Liga Profesional">Argentina Liga Profesional</option>
+                            <option value="Liga MX">Mexico Liga MX</option>
+                            <option value="Saudi Pro League">Saudi Pro League</option>
+                            <option value="Stars League">Qatar Stars League</option>
+                            <option value="UAE Pro League">United Arab Emirates Pro League</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="row mt-5">
+                    <div class="col">
+                        <h3>Club-from:</h3>
+                    </div>
+                    <div class="col">
+                        <select class="form-select" name="Club-from" aria-label="Select club">
+                            <option selected>club player will play</option>
+            
+                            <option value="Real Madrid">Real Madrid</option>
+                            <option value="FC Barcelona">FC Barcelona</option>
+                            <option value="Manchester United">Manchester United</option>
+                            <option value="Liverpool FC">Liverpool FC</option>
+                            <option value="Bayern Munich">Bayern Munich</option>
+                            <option value="Paris Saint-Germain">Paris Saint-Germain</option>
+                            <option value="Juventus FC">Juventus FC</option>
+            
+                            <option value="Manchester City">Manchester City</option>
+                            <option value="Arsenal FC">Arsenal FC</option>
+                            <option value="Chelsea FC">Chelsea FC</option>
+                            <option value="AC Milan">AC Milan</option>
+                            <option value="Inter Milan">Inter Milan</option>
+                            <option value="Atlético de Madrid">Atlético de Madrid</option>
+            
+                            <option value="Tottenham Hotspur">Tottenham Hotspur</option>
+                            <option value="AS Roma">AS Roma</option>
+                            <option value="Napoli">SSC Napoli</option>
+                            <option value="SL Benfica">SL Benfica</option>
+                            <option value="Sporting CP">Sporting CP</option>
+                            <option value="FC Porto">FC Porto</option>
+                            <option value="Ajax Amsterdam">Ajax Amsterdam</option>
+                            <option value="Borussia Dortmund">Borussia Dortmund</option>
+            
+                            <option value="Newcastle United">Newcastle United</option>
+                            <option value="West Ham United">West Ham United</option>
+                            <option value="Leicester City">Leicester City</option>
+                            <option value="Aston Villa">Aston Villa</option>
+            
+                            <option value="Sevilla FC">Sevilla FC</option>
+                            <option value="Real Sociedad">Real Sociedad</option>
+                            <option value="Villarreal CF">Villarreal CF</option>
+                            <option value="SS Lazio">SS Lazio</option>
+                            <option value="ACF Fiorentina">ACF Fiorentina</option>
+                            <option value="RB Leipzig">RB Leipzig</option>
+                            <option value="Eintracht Frankfurt">Eintracht Frankfurt</option>
+                            <option value="Bayer 04 Leverkusen">Bayer 04 Leverkusen</option>
+                            <option value="Borussia Mönchengladbach">Borussia Mönchengladbach</option>
+            
+                            <option value="Leeds United">Leeds United</option>
+                            <option value="Nottingham Forest">Nottingham Forest</option>
+                            <option value="Valencia CF">Valencia CF</option>
+                            <option value="Real Betis Balompié">Real Betis Balompié</option>
+                            <option value="Atalanta BC">Atalanta BC</option>
+                            <option value="Torino FC">Torino FC</option>
+            
+                            <option value="Wolverhampton Wanderers">Wolverhampton Wanderers</option>
+                            <option value="Brighton & Hove Albion">Brighton & Hove Albion</option>
+                            <option value="Fulham FC">Fulham FC</option>
+                            <option value="Crystal Palace">Crystal Palace</option>
+                            <option value="Southampton FC">Southampton FC</option>
+                            <option value="Brentford FC">Brentford FC</option>
+                            <option value="Hellas Verona">Hellas Verona</option>
+                            <option value="Udinese Calcio">Udinese Calcio</option>
+                            <option value="Sampdoria">UC Sampdoria</option>
+                            <option value="Sassuolo">US Sassuolo</option>
+                            <option value="Salernitana">US Salernitana 1919</option>
+                            <option value="Empoli FC">FC Empoli</option>
+                            <option value="Monza">AC Monza</option>
+                            <option value="Bologna FC 1909">Bologna FC 1909</option>
+                            <option value="Cagliari Calcio">Cagliari Calcio</option>
+            
+                            <option value="SC Freiburg">SC Freiburg</option>
+                            <option value="TSG 1899 Hoffenheim">TSG 1899 Hoffenheim</option>
+                            <option value="VfB Stuttgart">VfB Stuttgart</option>
+                            <option value="VfL Wolfsburg">VfL Wolfsburg</option>
+                            <option value="FC Schalke 04">FC Schalke 04</option>
+                            <option value="Hertha BSC">Hertha BSC</option>
+                            <option value="1. FC Köln">1. FC Köln</option>
+                            <option value="1. FSV Mainz 05">1. FSV Mainz 05</option>
+                            <option value="SV Werder Bremen">SV Werder Bremen</option>
+                            <option value="FC Augsburg">FC Augsburg</option>
+                            <option value="VfL Bochum">VfL Bochum</option>
+            
+                            <option value="Olympique Lyon">Olympique Lyon</option>
+                            <option value="Olympique Marseille">Olympique Marseille</option>
+                            <option value="Stade Rennais FC">Stade Rennais FC</option>
+                            <option value="OGC Nice">OGC Nice</option>
+                            <option value="AS Monaco">AS Monaco</option>
+                            <option value="RC Lens">RC Lens</option>
+                            <option value="RC Strasbourg Alsace">RC Strasbourg Alsace</option>
+                            <option value="FC Nantes">FC Nantes</option>
+                            <option value="Montpellier HSC">Montpellier HSC</option>
+                            <option value="FC Lorient">FC Lorient</option>
+                            <option value="FC Toulouse">FC Toulouse</option>
+                            <option value="Clermont Foot 63">Clermont Foot 63</option>
+                            <option value="ESTAC Troyes">ESTAC Troyes</option>
+                            <option value="AC Ajaccio">AC Ajaccio</option>
+                            <option value="AJ Auxerre">AJ Auxerre</option>
+                            <option value="Angers SCO">Angers SCO</option>
+                            <option value="Stade Brestois 29">Stade Brestois 29</option>
+                            <option value="Stade Reims">Stade Reims</option>
+            
+                            <option value="Feyenoord Rotterdam">Feyenoord Rotterdam</option>
+                            <option value="Club Brugge KV">Club Brugge KV</option>
+                            <option value="CA River Plate">CA River Plate</option>
+                            
+                        </select>
+                    </div>
+                </div>
+            </div>
+            <h2 class="mt-4 border-bottom pb-2">New Team Info</h2>
+            <div class="container form-group">
+                <div class="row mt-5">
+                    <div class="col">
+                        <h3>Country-to:</h3>
+                    </div>
+                    <div class="col">
+                        <select class="form-select" name="Country-to" aria-label="Select player's country" name="country">
+                            <option selected>country player will play</option>
+                            <option value="Afghanistan">Afghanistan</option>
+                            <option value="Albania">Albania</option>
+                            <option value="Algeria">Algeria</option>
+                            <option value="Andorra">Andorra</option>
+                            <option value="Angola">Angola</option>
+                            <option value="Antigua and Barbuda">Antigua and Barbuda</option>
+                            <option value="Argentina">Argentina</option>
+                            <option value="Armenia">Armenia</option>
+                            <option value="Australia">Australia</option>
+                            <option value="Austria">Austria</option>
+                            <option value="Azerbaijan">Azerbaijan</option>
+                            <option value="Bahamas">Bahamas</option>
+                            <option value="Bahrain">Bahrain</option>
+                            <option value="Bangladesh">Bangladesh</option>
+                            <option value="Barbados">Barbados</option>
+                            <option value="Belarus">Belarus</option>
+                            <option value="Belgium">Belgium</option>
+                            <option value="Belize">Belize</option>
+                            <option value="Benin">Benin</option>
+                            <option value="Bhutan">Bhutan</option>
+                            <option value="Bolivia">Bolivia</option>
+                            <option value="Bosnia and Herzegovina">Bosnia and Herzegovina</option>
+                            <option value="Botswana">Botswana</option>
+                            <option value="Brazil">Brazil</option>
+                            <option value="Brunei">Brunei</option>
+                            <option value="Bulgaria">Bulgaria</option>
+                            <option value="Burkina Faso">Burkina Faso</option>
+                            <option value="Burundi">Burundi</option>
+                            <option value="Cabo Verde">Cabo Verde</option>
+                            <option value="Cambodia">Cambodia</option>
+                            <option value="Cameroon">Cameroon</option>
+                            <option value="Canada">Canada</option>
+                            <option value="Central African Republic">Central African Republic</option>
+                            <option value="Chad">Chad</option>
+                            <option value="Chile">Chile</option>
+                            <option value="China">China</option>
+                            <option value="Colombia">Colombia</option>
+                            <option value="Comoros">Comoros</option>
+                            <option value="Congo (Congo-Brazzaville)">Congo (Congo-Brazzaville)</option>
+                            <option value="Costa Rica">Costa Rica</option>
+                            <option value="Croatia">Croatia</option>
+                            <option value="Cuba">Cuba</option>
+                            <option value="Cyprus">Cyprus</option>
+                            <option value="Czechia (Czech Republic)">Czechia (Czech Republic)</option>
+                            <option value="Democratic Republic of the Congo">Democratic Republic of the Congo</option>
+                            <option value="Denmark">Denmark</option>
+                            <option value="Djibouti">Djibouti</option>
+                            <option value="Dominica">Dominica</option>
+                            <option value="Dominican Republic">Dominican Republic</option>
+                            <option value="Ecuador">Ecuador</option>
+                            <option value="Egypt">Egypt</option>
+                            <option value="El Salvador">El Salvador</option>
+                            <option value="England">England</option>
+                            <option value="Equatorial Guinea">Equatorial Guinea</option>
+                            <option value="Eritrea">Eritrea</option>
+                            <option value="Estonia">Estonia</option>
+                            <option value="Eswatini (fmr. Swaziland)">Eswatini (fmr. Swaziland)</option>
+                            <option value="Ethiopia">Ethiopia</option>
+                            <option value="Fiji">Fiji</option>
+                            <option value="Finland">Finland</option>
+                            <option value="France">France</option>
+                            <option value="Gabon">Gabon</option>
+                            <option value="Gambia">Gambia</option>
+                            <option value="Georgia">Georgia</option>
+                            <option value="Germany">Germany</option>
+                            <option value="Ghana">Ghana</option>
+                            <option value="Greece">Greece</option>
+                            <option value="Grenada">Grenada</option>
+                            <option value="Guatemala">Guatemala</option>
+                            <option value="Guinea">Guinea</option>
+                            <option value="Guinea-Bissau">Guinea-Bissau</option>
+                            <option value="Guyana">Guyana</option>
+                            <option value="Haiti">Haiti</option>
+                            <option value="Holy See">Holy See</option>
+                            <option value="Honduras">Honduras</option>
+                            <option value="Hungary">Hungary</option>
+                            <option value="Iceland">Iceland</option>
+                            <option value="India">India</option>
+                            <option value="Indonesia">Indonesia</option>
+                            <option value="Iran">Iran</option>
+                            <option value="Iraq">Iraq</option>
+                            <option value="Ireland">Ireland</option>
+                            <option value="Israel">Israel</option>
+                            <option value="Italy">Italy</option>
+                            <option value="Jamaica">Jamaica</option>
+                            <option value="Japan">Japan</option>
+                            <option value="Jordan">Jordan</option>
+                            <option value="Kazakhstan">Kazakhstan</option>
+                            <option value="Kenya">Kenya</option>
+                            <option value="Kiribati">Kiribati</option>
+                            <option value="Kuwait">Kuwait</option>
+                            <option value="Kyrgyzstan">Kyrgyzstan</option>
+                            <option value="Laos">Laos</option>
+                            <option value="Latvia">Latvia</option>
+                            <option value="Lebanon">Lebanon</option>
+                            <option value="Lesotho">Lesotho</option>
+                            <option value="Liberia">Liberia</option>
+                            <option value="Libya">Libya</option>
+                            <option value="Liechtenstein">Liechtenstein</option>
+                            <option value="Lithuania">Lithuania</option>
+                            <option value="Luxembourg">Luxembourg</option>
+                            <option value="Madagascar">Madagascar</option>
+                            <option value="Malawi">Malawi</option>
+                            <option value="Malaysia">Malaysia</option>
+                            <option value="Maldives">Maldives</option>
+                            <option value="Mali">Mali</option>
+                            <option value="Malta">Malta</option>
+                            <option value="Marshall Islands">Marshall Islands</option>
+                            <option value="Mauritania">Mauritania</option>
+                            <option value="Mauritius">Mauritius</option>
+                            <option value="Mexico">Mexico</option>
+                            <option value="Micronesia">Micronesia</option>
+                            <option value="Moldova">Moldova</option>
+                            <option value="Monaco">Monaco</option>
+                            <option value="Mongolia">Mongolia</option>
+                            <option value="Montenegro">Montenegro</option>
+                            <option value="Morocco">Morocco</option>
+                            <option value="Mozambique">Mozambique</option>
+                            <option value="Myanmar (formerly Burma)">Myanmar (formerly Burma)</option>
+                            <option value="Namibia">Namibia</option>
+                            <option value="Nauru">Nauru</option>
+                            <option value="Nepal">Nepal</option>
+                            <option value="Netherlands">Netherlands</option>
+                            <option value="New Zealand">New Zealand</option>
+                            <option value="Nicaragua">Nicaragua</option>
+                            <option value="Niger">Niger</option>
+                            <option value="Nigeria">Nigeria</option>
+                            <option value="North Korea">North Korea</option>
+                            <option value="North Macedonia">North Macedonia</option>
+                            <option value="Norway">Norway</option>
+                            <option value="Oman">Oman</option>
+                            <option value="Pakistan">Pakistan</option>
+                            <option value="Palau">Palau</option>
+                            <option value="Palestine State">Palestine State</option>
+                            <option value="Panama">Panama</option>
+                            <option value="Papua New Guinea">Papua New Guinea</option>
+                            <option value="Paraguay">Paraguay</option>
+                            <option value="Peru">Peru</option>
+                            <option value="Philippines">Philippines</option>
+                            <option value="Poland">Poland</option>
+                            <option value="Portugal">Portugal</option>
+                            <option value="Qatar">Qatar</option>
+                            <option value="Romania">Romania</option>
+                            <option value="Russia">Russia</option>
+                            <option value="Rwanda">Rwanda</option>
+                            <option value="Saint Kitts and Nevis">Saint Kitts and Nevis</option>
+                            <option value="Saint Lucia">Saint Lucia</option>
+                            <option value="Saint Vincent and the Grenadines">Saint Vincent and the Grenadines</option>
+                            <option value="Samoa">Samoa</option>
+                            <option value="San Marino">San Marino</option>
+                            <option value="Sao Tome and Principe">Sao Tome and Principe</option>
+                            <option value="Saudi Arabia">Saudi Arabia</option>
+                            <option value="Scotland">Scotland</option>
+                            <option value="Senegal">Senegal</option>
+                            <option value="Serbia">Serbia</option>
+                            <option value="Seychelles">Seychelles</option>
+                            <option value="Sierra Leone">Sierra Leone</option>
+                            <option value="Singapore">Singapore</option>
+                            <option value="Slovakia">Slovakia</option>
+                            <option value="Slovenia">Slovenia</option>
+                            <option value="Solomon Islands">Solomon Islands</option>
+                            <option value="Somalia">Somalia</option>
+                            <option value="South Africa">South Africa</option>
+                            <option value="South Korea">South Korea</option>
+                            <option value="South Sudan">South Sudan</option>
+                            <option value="Spain">Spain</option>
+                            <option value="Sri Lanka">Sri Lanka</option>
+                            <option value="Sudan">Sudan</option>
+                            <option value="Suriname">Suriname</option>
+                            <option value="Sweden">Sweden</option>
+                            <option value="Switzerland">Switzerland</option>
+                            <option value="Syria">Syria</option>
+                            <option value="Tajikistan">Tajikistan</option>
+                            <option value="Tanzania">Tanzania</option>
+                            <option value="Thailand">Thailand</option>
+                            <option value="Timor-Leste">Timor-Leste</option>
+                            <option value="Togo">Togo</option>
+                            <option value="Tonga">Tonga</option>
+                            <option value="Trinidad and Tobago">Trinidad and Tobago</option>
+                            <option value="Tunisia">Tunisia</option>
+                            <option value="Turkey">Turkey</option>
+                            <option value="Turkmenistan">Turkmenistan</option>
+                            <option value="Tuvalu">Tuvalu</option>
+                            <option value="Uganda">Uganda</option>
+                            <option value="Ukraine">Ukraine</option>
+                            <option value="United Arab Emirates">United Arab Emirates</option>
+                            <option value="United Kingdom">United Kingdom</option>
+                            <option value="United States">United States</option>
+                            <option value="Uruguay">Uruguay</option>
+                            <option value="Uzbekistan">Uzbekistan</option>
+                            <option value="Vanuatu">Vanuatu</option>
+                            <option value="Vatican City">Vatican City</option>
+                            <option value="Venezuela">Venezuela</option>
+                            <option value="Vietnam">Vietnam</option>
+                            <option value="Wales">Wales</option>
+                            <option value="Yemen">Yemen</option>
+                            <option value="Zambia">Zambia</option>
+                            <option value="Zimbabwe">Zimbabwe</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="row mt-5">
+                    <div class="col">
+                        <h3>league-to:</h3>
+                    </div>
+                    <div class="col">
+                        <select class="form-select" name="league-to" aria-label="Select league">
+                            <option selected>league player will play</option>
+                            <option value="Premier League">Premier League</option>
+                            <option value="LaLiga">LaLiga</option>
+                            <option value="Serie A">Serie A</option>
+                            <option value="Bundesliga">Bundesliga</option>
+                            <option value="Ligue 1">Ligue 1</option>
+                            <option value="Eredivisie">Eredivisie</option>
+                            <option value="Liga Portugal">Liga Portugal</option>
+                            <option value="Jupiler Pro League">Jupiler Pro League</option>
+                            <option value="Süper Lig">Süper Lig</option>
+                            <option value="MLS">MLS</option>
+                            <option value="Scottish Premiership">Scottish Premiership</option>
+                            <option value="Championship">Championship</option>
+                            <option value="Super League 1">Super League 1 (Greece)</option>
+                            <option value="Premier Liga">Russian Premier Liga</option>
+                            <option value="Premier Liga Ukraine">Ukrainian Premier Liga</option>
+                            <option value="Fortuna Liga">Czech Fortuna Liga</option>
+                            <option value="Austria Bundesliga">Austria Bundesliga</option>
+                            <option value="Swiss Super League">Swiss Super League</option>
+                            <option value="Série A">Brazil Série A</option>
+                            <option value="Liga Profesional">Argentina Liga Profesional</option>
+                            <option value="Liga MX">Mexico Liga MX</option>
+                            <option value="Saudi Pro League">Saudi Pro League</option>
+                            <option value="Stars League">Qatar Stars League</option>
+                            <option value="UAE Pro League">United Arab Emirates Pro League</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="row mt-5">
+                    <div class="col">
+                        <h3>Club-to:</h3>
+                    </div>
+                    <div class="col">
+                        <select class="form-select" name="Club-to" aria-label="Select club">
+                            <option selected>club player will play</option>
+            
+                            <option value="Real Madrid">Real Madrid</option>
+                            <option value="FC Barcelona">FC Barcelona</option>
+                            <option value="Manchester United">Manchester United</option>
+                            <option value="Liverpool FC">Liverpool FC</option>
+                            <option value="Bayern Munich">Bayern Munich</option>
+                            <option value="Paris Saint-Germain">Paris Saint-Germain</option>
+                            <option value="Juventus FC">Juventus FC</option>
+            
+                            <option value="Manchester City">Manchester City</option>
+                            <option value="Arsenal FC">Arsenal FC</option>
+                            <option value="Chelsea FC">Chelsea FC</option>
+                            <option value="AC Milan">AC Milan</option>
+                            <option value="Inter Milan">Inter Milan</option>
+                            <option value="Atlético de Madrid">Atlético de Madrid</option>
+            
+                            <option value="Tottenham Hotspur">Tottenham Hotspur</option>
+                            <option value="AS Roma">AS Roma</option>
+                            <option value="Napoli">SSC Napoli</option>
+                            <option value="SL Benfica">SL Benfica</option>
+                            <option value="Sporting CP">Sporting CP</option>
+                            <option value="FC Porto">FC Porto</option>
+                            <option value="Ajax Amsterdam">Ajax Amsterdam</option>
+                            <option value="Borussia Dortmund">Borussia Dortmund</option>
+            
+                            <option value="Newcastle United">Newcastle United</option>
+                            <option value="West Ham United">West Ham United</option>
+                            <option value="Leicester City">Leicester City</option>
+                            <option value="Aston Villa">Aston Villa</option>
+            
+                            <option value="Sevilla FC">Sevilla FC</option>
+                            <option value="Real Sociedad">Real Sociedad</option>
+                            <option value="Villarreal CF">Villarreal CF</option>
+                            <option value="SS Lazio">SS Lazio</option>
+                            <option value="ACF Fiorentina">ACF Fiorentina</option>
+                            <option value="RB Leipzig">RB Leipzig</option>
+                            <option value="Eintracht Frankfurt">Eintracht Frankfurt</option>
+                            <option value="Bayer 04 Leverkusen">Bayer 04 Leverkusen</option>
+                            <option value="Borussia Mönchengladbach">Borussia Mönchengladbach</option>
+            
+                            <option value="Leeds United">Leeds United</option>
+                            <option value="Nottingham Forest">Nottingham Forest</option>
+                            <option value="Valencia CF">Valencia CF</option>
+                            <option value="Real Betis Balompié">Real Betis Balompié</option>
+                            <option value="Atalanta BC">Atalanta BC</option>
+                            <option value="Torino FC">Torino FC</option>
+            
+                            <option value="Wolverhampton Wanderers">Wolverhampton Wanderers</option>
+                            <option value="Brighton & Hove Albion">Brighton & Hove Albion</option>
+                            <option value="Fulham FC">Fulham FC</option>
+                            <option value="Crystal Palace">Crystal Palace</option>
+                            <option value="Southampton FC">Southampton FC</option>
+                            <option value="Brentford FC">Brentford FC</option>
+                            <option value="Hellas Verona">Hellas Verona</option>
+                            <option value="Udinese Calcio">Udinese Calcio</option>
+                            <option value="Sampdoria">UC Sampdoria</option>
+                            <option value="Sassuolo">US Sassuolo</option>
+                            <option value="Salernitana">US Salernitana 1919</option>
+                            <option value="Empoli FC">FC Empoli</option>
+                            <option value="Monza">AC Monza</option>
+                            <option value="Bologna FC 1909">Bologna FC 1909</option>
+                            <option value="Cagliari Calcio">Cagliari Calcio</option>
+            
+                            <option value="SC Freiburg">SC Freiburg</option>
+                            <option value="TSG 1899 Hoffenheim">TSG 1899 Hoffenheim</option>
+                            <option value="VfB Stuttgart">VfB Stuttgart</option>
+                            <option value="VfL Wolfsburg">VfL Wolfsburg</option>
+                            <option value="FC Schalke 04">FC Schalke 04</option>
+                            <option value="Hertha BSC">Hertha BSC</option>
+                            <option value="1. FC Köln">1. FC Köln</option>
+                            <option value="1. FSV Mainz 05">1. FSV Mainz 05</option>
+                            <option value="SV Werder Bremen">SV Werder Bremen</option>
+                            <option value="FC Augsburg">FC Augsburg</option>
+                            <option value="VfL Bochum">VfL Bochum</option>
+            
+                            <option value="Olympique Lyon">Olympique Lyon</option>
+                            <option value="Olympique Marseille">Olympique Marseille</option>
+                            <option value="Stade Rennais FC">Stade Rennais FC</option>
+                            <option value="OGC Nice">OGC Nice</option>
+                            <option value="AS Monaco">AS Monaco</option>
+                            <option value="RC Lens">RC Lens</option>
+                            <option value="RC Strasbourg Alsace">RC Strasbourg Alsace</option>
+                            <option value="FC Nantes">FC Nantes</option>
+                            <option value="Montpellier HSC">Montpellier HSC</option>
+                            <option value="FC Lorient">FC Lorient</option>
+                            <option value="FC Toulouse">FC Toulouse</option>
+                            <option value="Clermont Foot 63">Clermont Foot 63</option>
+                            <option value="ESTAC Troyes">ESTAC Troyes</option>
+                            <option value="AC Ajaccio">AC Ajaccio</option>
+                            <option value="AJ Auxerre">AJ Auxerre</option>
+                            <option value="Angers SCO">Angers SCO</option>
+                            <option value="Stade Brestois 29">Stade Brestois 29</option>
+                            <option value="Stade Reims">Stade Reims</option>
+            
+                            <option value="Feyenoord Rotterdam">Feyenoord Rotterdam</option>
+                            <option value="Club Brugge KV">Club Brugge KV</option>
+                            <option value="CA River Plate">CA River Plate</option>
+                            
+                        </select>
+                    </div>
+                </div>
+                <div class="row mt-5">
+                    <div class="col">
+                            <h3>Picture(Optional):</h3>
+                    </div>
+                    <div class="col">
+                        <input type="file" name="Picture" class="form-control" id="File">
+                    </div>
+                </div>
+                <div class="mt-5 text-center">
+                    <button type="submit" class="btn btn-primary btn-lg">Submit</button>
+                </div>
+            </div>
+        </form>
+    </main>
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.14.3/dist/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.1.3/dist/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+    <script src="{{ url_for('static', filename='js/app.js') }}"></script>
+    <script>
+        document.addEventListener("DOMContentLoaded", function(){
+            document.querySelector('input[name="Name"]').value="{{ player[1]}}";
+            document.querySelector('select[name="Position"]').value="{{ player[2]}}";
+            document.querySelector('select[name="age"]').value="{{ player[3]}}";
+            document.querySelector('select[name="Country-from"]').value="{{ player[4]}}";
+            document.querySelector('select[name="league-from"]').value="{{ player[5]}}";
+            document.querySelector('select[name="Club-from"]').value="{{ player[6] }}";
+            document.querySelector('select[name="Country-to"]').value="{{  player[7] }}";
+            document.querySelector('select[name="league-to"]').value="{{ player[8] }}";
+            document.querySelector('select[name="Club-to"]').value="{{ player[9] }}";
+
+        })
+    </script>
+  </body>
+</html>

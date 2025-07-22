@@ -14,9 +14,6 @@ STATIC_PATH = os.path.join(BASE_DIR, "../Front-end/static")
 app = Flask(__name__, template_folder=TEMPLATE_DIR, static_folder=STATIC_PATH)
 
 
-
-
-
 @app.route("/")
 def index():
     return render_template("index.html")
@@ -26,7 +23,7 @@ def index():
 def profile():
     return render_template("profile.html")
 
-@app.route("/display")
+@app.route("/display", methods=["GET"])
 def display():
     db = MySQLdb.connect(host="localhost", user="root", password="", database="playerdb")
     cursor = db.cursor()
@@ -56,6 +53,73 @@ def delete(player_id):
     
     return render_template("delete.html", player=player)
 
+@app.route("/update/<int:player_id>", methods=["GET", "POST"])
+def update(player_id):
+    soccer_model = joblib.load("soccer_model.pkl")
+    db = MySQLdb.connect(host="localhost", user="root", password="", database="playerdb")
+    cursor = db.cursor()
+    
+    cursor.execute("SELECT * FROM players WHERE id=%s", (player_id, ))
+    player = cursor.fetchone()
+    
+    if(request.method == "POST"):
+        name = request.form["Name"]
+        position = request.form["Position"]
+        age = request.form["age"]
+        country_from = request.form["Country-from"]
+        league_from = request.form["league-from"]
+        club_from = request.form["Club-from"]
+        country_to = request.form["Country-to"]
+        league_to = request.form["league-to"]
+        club_to = request.form["Club-to"]
+        picture = request.files["Picture"]
+        
+        if picture and picture.filename:
+            picture_path = os.path.join(STATIC_PATH,"uploads", picture.filename)
+            picture.save(picture_path)
+            picture_url = f"/static/uploads/{picture.filename}"
+        else:
+            picture_url = player[10]
+            
+        data_frame = pd.DataFrame({
+            "position": [position],
+            "age": [age],
+            "country_from": [country_from],
+            "league_from": [league_from],
+            "club_from": [club_from],
+            "country_to": [country_to],
+            "league_to": [league_to],
+            "club_to": [club_to]
+        })
+
+        OH_encoder = joblib.load("one_hot_encoder.pkl")
+        OH_data_frame = pd.DataFrame(OH_encoder.transform(data_frame))
+
+        OH_data_frame.index = data_frame.index
+        OH_data_frame.columns = OH_data_frame.columns.astype(str)
+
+        prediction = soccer_model.predict(OH_data_frame)[0]
+
+        
+        cursor.execute("UPDATE players SET name=%s, position=%s, age=%s, country_from=%s, league_from=%s, club_from=%s, country_to=%s, league_to=%s, club_to=%s, photo_url=%s, market_value=%s WHERE id=%s", (name, position, age, country_from, league_from, club_from, country_to, league_to, club_to, picture_url, prediction, player_id ))
+        cursor.execute("SELECT * FROM players")
+    
+        players = cursor.fetchall()
+        
+        db.commit()
+        cursor.close()
+        db.close()
+        return render_template("display.html", players=players)
+    else:
+        cursor.execute("SELECT * FROM players WHERE id=%s", (player_id, ))
+        player = cursor.fetchone()
+        cursor.close()
+        db.close()
+        return render_template('update.html', player=player)
+
+    
+    
+
 
 @app.route("/card", methods=["POST"])
 def card():
@@ -75,8 +139,7 @@ def card():
         picture_url = f"/static/uploads/{picture.filename}"
     else:
         picture_url = "/static/uploads/no-picture-available-icon-20.jpg"
-
-
+        
     position = request.form["Position"]
     age = request.form["age"]
     country_from = request.form["Country-from"]
@@ -85,19 +148,7 @@ def card():
     country_to = request.form["Country-to"]
     league_to = request.form["league-to"]
     club_to = request.form["Club-to"]
-    
-    cursor.execute("INSERT INTO players (name, position, age, country_from, league_from,club_from, country_to, league_to, club_to, photo_url)VALUES(%s, %s, %s, %s, %s, %s, %s, %s, %s, %s)",
-        (name, position, age, country_from, league_from, club_from,  country_to, league_to, club_to, picture_url)
-    )
-    
-    db.commit()
-    
-    
-    cursor.close()
-    db.close()
-    
-    
-
+        
     data_frame = pd.DataFrame({
         "position": [position],
         "age": [age],
@@ -116,6 +167,17 @@ def card():
     OH_data_frame.columns = OH_data_frame.columns.astype(str)
 
     prediction = soccer_model.predict(OH_data_frame)[0]
+
+    
+    cursor.execute("INSERT INTO players (name, position, age, country_from, league_from,club_from, country_to, league_to, club_to, photo_url, market_value)VALUES(%s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s)",
+        (name, position, age, country_from, league_from, club_from,  country_to, league_to, club_to, picture_url, prediction)
+    )
+    
+    db.commit()
+    
+    
+    cursor.close()
+    db.close()
     
 
 
