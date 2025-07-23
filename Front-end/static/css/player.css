@@ -1,0 +1,7 @@
+.card:hover .navbar{
+    background-color: blue !important;
+}
+
+.card:hover {
+    background-color: blue;
+}

@@ -120,7 +120,20 @@ def update(player_id):
         cursor.close()
         db.close()
         return render_template('update.html', player=player)
-
+    
+@app.route("/player/<int:player_id>", methods=["GET"])
+def player(player_id):
+    db = MySQLdb.connect(host="localhost", user="root", password="", database="playerdb")
+    cursor = db.cursor()
+    
+    cursor.execute("SELECT * FROM players WHERE id=%s", (player_id, ))
+    player = cursor.fetchone()
+    
+    cursor.close()
+    db.close()
+    
+    return render_template("player.html", player=player)
+    
     
     
 
