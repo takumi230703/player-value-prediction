@@ -2,3 +2,6 @@
 
 [start]
 cmd = "gunicorn Back-end.app:app"
+
+[phases.setup]
+nixPkgs = ["mariadb", "pkg-config"]
