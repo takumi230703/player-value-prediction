@@ -7,6 +7,7 @@
 
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/player.css')}}">
 
     <title>display</title>
   </head>
@@ -27,7 +28,7 @@
                             <div class="d-flex justify-content-end">
                                 <nav class="navbar navbar-light bg-light">
                                     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarToggleExternalContent{{ loop.index}}" aria-controls="navbarToggleExternalContent" aria-expanded="false" aria-label="Toggle navigation">
-                                      <span class="navbar-toggler-icon"></span>
+                                        <span class="navbar-toggler-icon"></span>
                                     </button>
                                 </nav>
                                 <div class="collapse" id="navbarToggleExternalContent{{ loop.index}}">
@@ -39,12 +40,14 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="d-flex justify-content-center">
-                                <img src="{{ player[10]}}" class="img-fluid" style="width: 200px; height: 200px; object-fit: contain;">
-                            </div>
-                            <div class="m-5">
-                                <h2 class="text-primary">{{ player[1]}}</h2>
-                            </div>
+                            <a href="/player/{{ player[0] }}">
+                                <div class="d-flex justify-content-center">
+                                    <img src="{{ player[10]}}" class="img-fluid" style="width: 200px; height: 200px; object-fit: contain;">
+                                </div>
+                                <div class="m-5">
+                                    <h2 class="text-primary">{{ player[1]}}</h2>
+                                </div>
+                            </a>
                         </div>
                     </div>
                    <div class="modal fade" id="deleteModal{{loop.index}}" aria-hidden="true">
