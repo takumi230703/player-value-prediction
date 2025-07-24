@@ -1,5 +1,7 @@
 import pandas as pd
 from flask import Flask, render_template, request
+import pymysql
+pymysql.install_as_MySQLdb()
 import MySQLdb
 import joblib
 import os
@@ -16,7 +18,6 @@ app = Flask(__name__, template_folder=TEMPLATE_DIR, static_folder=STATIC_PATH)
 @app.route("/")
 def index():
     return render_template("index.html")
-
 
 @app.route("/profile")
 def profile():

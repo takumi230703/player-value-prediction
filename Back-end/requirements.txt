@@ -11,6 +11,7 @@ mysqlclient==2.2.7
 numpy==2.3.1
 packaging==25.0
 pandas==2.3.1
+PyMySQL==1.1.1
 python-dateutil==2.9.0.post0
 pytz==2025.2
 scikit-learn==1.7.0
