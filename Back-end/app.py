@@ -1,5 +1,7 @@
 import pandas as pd
 from flask import Flask, render_template, request
+import pymysql
+pymysql.install_as_MySQLdb()
 import MySQLdb
 import joblib
 import os
