@@ -26,10 +26,10 @@
                         <h3>Name:</h3>
                     </div>
                     <div class="col">
-                        <input type="text" class="form-control" name="First_Name" id="InputName" placeholder="First name">
+                        <input type="text" class="form-control" name="First_Name" id="InputName" placeholder="First name" required>
                     </div>
                     <div class="col">
-                        <input type="text" class="form-control" name="Last_Name" id="InputName" placeholder="Last name">
+                        <input type="text" class="form-control" name="Last_Name" id="InputName" placeholder="Last name" required>
                     </div>
                 </div>
                 <div class="row mt-5">
@@ -343,104 +343,292 @@
                     </div>
                     <div class="col">
                         <select class="form-select" name="Club-from" aria-label="Select club">
-                            <option value="" selected>club player will play</option>
-            
-                            <option value="Real Madrid">Real Madrid</option>
-                            <option value="FC Barcelona">FC Barcelona</option>
+                            <option value="Manchester City">Manchester City</option>
                             <option value="Manchester United">Manchester United</option>
                             <option value="Liverpool FC">Liverpool FC</option>
-                            <option value="Bayern Munich">Bayern Munich</option>
-                            <option value="Paris Saint-Germain">Paris Saint-Germain</option>
-                            <option value="Juventus FC">Juventus FC</option>
-            
-                            <option value="Manchester City">Manchester City</option>
                             <option value="Arsenal FC">Arsenal FC</option>
                             <option value="Chelsea FC">Chelsea FC</option>
+                            <option value="Tottenham Hotspur">Tottenham Hotspur</option>
+                            <option value="Newcastle United">Newcastle United</option>
+                            <option value="Aston Villa">Aston Villa</option>
+                            <option value="West Ham United">West Ham United</option>
+                            <option value="Brighton & Hove Albion">Brighton & Hove Albion</option>
+                            <option value="Brentford FC">Brentford FC</option>
+                            <option value="Fulham FC">Fulham FC</option>
+                            <option value="Crystal Palace">Crystal Palace</option>
+                            <option value="Wolverhampton Wanderers">Wolverhampton Wanderers</option>
+                            <option value="AFC Bournemouth">AFC Bournemouth</option>
+                            <option value="Nottingham Forest">Nottingham Forest</option>
+                            <option value="Everton FC">Everton FC</option>
+                            <option value="Leicester City">Leicester City</option>
+                            <option value="Leeds United">Leeds United</option>
+                            <option value="Southampton FC">Southampton FC</option>
+
+                            <option value="Burnley FC">Burnley FC</option>
+                            <option value="Sheffield United">Sheffield United</option>
+                            <option value="Luton Town">Luton Town</option>
+                            <option value="Middlesbrough FC">Middlesbrough FC</option>
+                            <option value="Watford FC">Watford FC</option>
+                            <option value="Norwich City">Norwich City</option>
+
+                            <option value="Derby County">Derby County</option>
+                            <option value="Ipswich Town">Ipswich Town</option>
+                            <option value="Oxford United">Oxford United</option>
+
+                            <option value="FC Barcelona">FC Barcelona</option>
+                            <option value="Real Madrid">Real Madrid</option>
+                            <option value="Atlético de Madrid">Atlético de Madrid</option>
+                            <option value="Real Sociedad">Real Sociedad</option>
+                            <option value="Villarreal CF">Villarreal CF</option>
+                            <option value="Real Betis Balompié">Real Betis Balompié</option>
+                            <option value="CA Osasuna">CA Osasuna</option>
+                            <option value="Athletic Bilbao">Athletic Bilbao</option>
+                            <option value="Málaga CF">Málaga CF</option>
+                            <option value="Girona FC">Girona FC</option>
+                            <option value="Rayo Vallecano">Rayo Vallecano</option>
+                            <option value="Sevilla FC">Sevilla FC</option>
+                            <option value="Celta de Vigo">Celta de Vigo</option>
+                            <option value="Cadiz">Cadiz</option>
+                            <option value="Getafe CF">Getafe CF</option>
+                            <option value="Valencia CF">Valencia CF</option>
+                            <option value="UD Almería">UD Almería</option>
+                            <option value="Real Valladolid CF">Real Valladolid CF</option>
+                            <option value="RCD Espanyol Barcelona">RCD Espanyol Barcelona</option>
+                            <option value="Elche CF">Elche CF</option>
+
+                            <option value="Granada CF">Granada CF</option>
+                            <option value="Deportivo Alavés">Deportivo Alavés</option>
+                            <option value="Levante UD">Levante UD</option>
+                            <option value="SD Eibar">SD Eibar</option>
+
+                            <option value="Juventus FC">Juventus FC</option>
                             <option value="AC Milan">AC Milan</option>
                             <option value="Inter Milan">Inter Milan</option>
-                            <option value="Atlético de Madrid">Atlético de Madrid</option>
-            
-                            <option value="Tottenham Hotspur">Tottenham Hotspur</option>
                             <option value="AS Roma">AS Roma</option>
-                            <option value="Napoli">SSC Napoli</option>
+                            <option value="Napoli">Napoli</option>
+                            <option value="SS Lazio">SS Lazio</option>
+                            <option value="Atalanta BC">Atalanta BC</option>
+                            <option value="ACF Fiorentina">ACF Fiorentina</option>
+                            <option value="Bologna FC 1909">Bologna FC 1909</option>
+                            <option value="Torino FC">Torino FC</option>
+                            <option value="Monza">Monza</option>
+                            <option value="Udinese Calcio">Udinese Calcio</option>
+                            <option value="Sassuolo">Sassuolo</option>
+                            <option value="Empoli FC">Empoli FC</option>
+                            <option value="Salernitana">Salernitana</option>
+                            <option value="US Lecce">US Lecce</option>
+                            <option value="Spezia Calcio">Spezia Calcio</option>
+                            <option value="Hellas Verona">Hellas Verona</option>
+                            <option value="US Cremonese">US Cremonese</option>
+                            <option value="UC Sampdoria">UC Sampdoria</option>
+
+                            <option value="Cagliari Calcio">Cagliari Calcio</option>
+                            <option value="Genoa CFC">Genoa CFC</option>
+                            <option value="Pisa Sporting Club">Pisa Sporting Club</option>
+                            <option value="Venezia FC">Venezia FC</option>
+                            <option value="Parma Calcio 1913">Parma Calcio 1913</option>
+
+                            <option value="Bayern Munich">Bayern Munich</option>
+                            <option value="Borussia Dortmund">Borussia Dortmund</option>
+                            <option value="RB Leipzig">RB Leipzig</option>
+                            <option value="1.FC Union Berlin">1.FC Union Berlin</option>
+                            <option value="SC Freiburg">SC Freiburg</option>
+                            <option value="Bayer 04 Leverkusen">Bayer 04 Leverkusen</option>
+                            <option value="Eintracht Frankfurt">Eintracht Frankfurt</option>
+                            <option value="VfL Wolfsburg">VfL Wolfsburg</option>
+                            <option value="1. FSV Mainz 05">1. FSV Mainz 05</option>
+                            <option value="Borussia Mönchengladbach">Borussia Mönchengladbach</option>
+                            <option value="1. FC Köln">1. FC Köln</option>
+                            <option value="TSG 1899 Hoffenheim">TSG 1899 Hoffenheim</option>
+                            <option value="SV Werder Bremen">SV Werder Bremen</option>
+                            <option value="VfL Bochum">VfL Bochum</option>
+                            <option value="FC Augsburg">FC Augsburg</option>
+                            <option value="VfB Stuttgart">VfB Stuttgart</option>
+                            <option value="FC Schalke 04">FC Schalke 04</option>
+                            <option value="Hertha BSC">Hertha BSC</option>
+
+
+                            <option value="Arminia Bielefeld">Arminia Bielefeld</option>
+                            <option value="FC St. Pauli">FC St. Pauli</option>
+                            <option value="SpVgg Greuther Fürth">SpVgg Greuther Fürth</option>
+                            <option value="Hamburger SV">Hamburger SV</option>
+                            <option value="1.FC Nuremberg">1.FC Nuremberg</option>
+
+
+                            <option value="Paris Saint-Germain">Paris Saint-Germain</option>
+                            <option value="RC Lens">RC Lens</option>
+                            <option value="Olympique Marseille">Olympique Marseille</option>
+                            <option value="Stade Rennais FC">Stade Rennais FC</option>
+                            <option value="LOSC Lille">LOSC Lille</option>
+                            <option value="AS Monaco">AS Monaco</option>
+                            <option value="Olympique Lyon">Olympique Lyon</option>
+                            <option value="Clermont Foot 63">Clermont Foot 63</option>
+                            <option value="OGC Nice">OGC Nice</option>
+                            <option value="FC Lorient">FC Lorient</option>
+                            <option value="Stade Reims">Stade Reims</option>
+                            <option value="Montpellier HSC">Montpellier HSC</option>
+                            <option value="FC Toulouse">FC Toulouse</option>
+                            <option value="Stade Brestois 29">Stade Brestois 29</option>
+                            <option value="RC Strasbourg Alsace">RC Strasbourg Alsace</option>
+                            <option value="FC Nantes">FC Nantes</option>
+                            <option value="AJ Auxerre">AJ Auxerre</option>
+                            <option value="AC Ajaccio">AC Ajaccio</option>
+                            <option value="ESTAC Troyes">ESTAC Troyes</option>
+                            <option value="Angers SCO">Angers SCO</option>
+
+
                             <option value="SL Benfica">SL Benfica</option>
                             <option value="Sporting CP">Sporting CP</option>
                             <option value="FC Porto">FC Porto</option>
+                            <option value="SC Braga">SC Braga</option>
+                            <option value="Portimonense SC">Portimonense SC</option>
+                            <option value="Vitória Guimarães SC">Vitória Guimarães SC</option>
+
+
                             <option value="Ajax Amsterdam">Ajax Amsterdam</option>
-                            <option value="Borussia Dortmund">Borussia Dortmund</option>
-            
-                            <option value="Newcastle United">Newcastle United</option>
-                            <option value="West Ham United">West Ham United</option>
-                            <option value="Leicester City">Leicester City</option>
-                            <option value="Aston Villa">Aston Villa</option>
-            
-                            <option value="Sevilla FC">Sevilla FC</option>
-                            <option value="Real Sociedad">Real Sociedad</option>
-                            <option value="Villarreal CF">Villarreal CF</option>
-                            <option value="SS Lazio">SS Lazio</option>
-                            <option value="ACF Fiorentina">ACF Fiorentina</option>
-                            <option value="RB Leipzig">RB Leipzig</option>
-                            <option value="Eintracht Frankfurt">Eintracht Frankfurt</option>
-                            <option value="Bayer 04 Leverkusen">Bayer 04 Leverkusen</option>
-                            <option value="Borussia Mönchengladbach">Borussia Mönchengladbach</option>
-            
-                            <option value="Leeds United">Leeds United</option>
-                            <option value="Nottingham Forest">Nottingham Forest</option>
-                            <option value="Valencia CF">Valencia CF</option>
-                            <option value="Real Betis Balompié">Real Betis Balompié</option>
-                            <option value="Atalanta BC">Atalanta BC</option>
-                            <option value="Torino FC">Torino FC</option>
-            
-                            <option value="Wolverhampton Wanderers">Wolverhampton Wanderers</option>
-                            <option value="Brighton & Hove Albion">Brighton & Hove Albion</option>
-                            <option value="Fulham FC">Fulham FC</option>
-                            <option value="Crystal Palace">Crystal Palace</option>
-                            <option value="Southampton FC">Southampton FC</option>
-                            <option value="Brentford FC">Brentford FC</option>
-                            <option value="Hellas Verona">Hellas Verona</option>
-                            <option value="Udinese Calcio">Udinese Calcio</option>
-                            <option value="Sampdoria">UC Sampdoria</option>
-                            <option value="Sassuolo">US Sassuolo</option>
-                            <option value="Salernitana">US Salernitana 1919</option>
-                            <option value="Empoli FC">FC Empoli</option>
-                            <option value="Monza">AC Monza</option>
-                            <option value="Bologna FC 1909">Bologna FC 1909</option>
-                            <option value="Cagliari Calcio">Cagliari Calcio</option>
-            
-                            <option value="SC Freiburg">SC Freiburg</option>
-                            <option value="TSG 1899 Hoffenheim">TSG 1899 Hoffenheim</option>
-                            <option value="VfB Stuttgart">VfB Stuttgart</option>
-                            <option value="VfL Wolfsburg">VfL Wolfsburg</option>
-                            <option value="FC Schalke 04">FC Schalke 04</option>
-                            <option value="Hertha BSC">Hertha BSC</option>
-                            <option value="1. FC Köln">1. FC Köln</option>
-                            <option value="1. FSV Mainz 05">1. FSV Mainz 05</option>
-                            <option value="SV Werder Bremen">SV Werder Bremen</option>
-                            <option value="FC Augsburg">FC Augsburg</option>
-                            <option value="VfL Bochum">VfL Bochum</option>
-            
-                            <option value="Olympique Lyon">Olympique Lyon</option>
-                            <option value="Olympique Marseille">Olympique Marseille</option>
-                            <option value="Stade Rennais FC">Stade Rennais FC</option>
-                            <option value="OGC Nice">OGC Nice</option>
-                            <option value="AS Monaco">AS Monaco</option>
-                            <option value="RC Lens">RC Lens</option>
-                            <option value="RC Strasbourg Alsace">RC Strasbourg Alsace</option>
-                            <option value="FC Nantes">FC Nantes</option>
-                            <option value="Montpellier HSC">Montpellier HSC</option>
-                            <option value="FC Lorient">FC Lorient</option>
-                            <option value="FC Toulouse">FC Toulouse</option>
-                            <option value="Clermont Foot 63">Clermont Foot 63</option>
-                            <option value="ESTAC Troyes">ESTAC Troyes</option>
-                            <option value="AC Ajaccio">AC Ajaccio</option>
-                            <option value="AJ Auxerre">AJ Auxerre</option>
-                            <option value="Angers SCO">Angers SCO</option>
-                            <option value="Stade Brestois 29">Stade Brestois 29</option>
-                            <option value="Stade Reims">Stade Reims</option>
-            
                             <option value="Feyenoord Rotterdam">Feyenoord Rotterdam</option>
+                            <option value="AZ Alkmaar">AZ Alkmaar</option>
+                            <option value="FC Groningen">FC Groningen</option>
+                            <option value="PSV Eindhoven">PSV Eindhoven</option>
+                            <option value="FC Utrecht">FC Utrecht</option>
+
+
                             <option value="Club Brugge KV">Club Brugge KV</option>
+                            <option value="KV Oostende">KV Oostende</option>
+                            <option value="RSC Anderlecht">RSC Anderlecht</option>
+                            <option value="KRC Genk">KRC Genk</option>
+                            <option value="RSC Charleroi">RSC Charleroi</option>
+
+                            <option value="Rangers FC">Rangers FC</option>
+                            <option value="Celtic FC">Celtic FC</option>
+
+                            <option value="Olympiacos Piraeus">Olympiacos Piraeus</option>
+                            <option value="Aris Thessaloniki">Aris Thessaloniki</option>
+                            <option value="AEK Athens">AEK Athens</option>
+                            <option value="PAOK Thessaloniki">PAOK Thessaloniki</option>
+
+                            <option value="AC Sparta Prague">AC Sparta Prague</option>
+                            <option value="SK Slavia Prague">SK Slavia Prague</option>
+                            <option value="FC Viktoria Plzen">FC Viktoria Plzen</option>
+
+                            <option value="Red Bull Salzburg">Red Bull Salzburg</option>
+                            <option value="SK Sturm Graz">SK Sturm Graz</option>
+                            <option value="Rapid Vienna">Rapid Vienna</option>
+                            <option value="LASK">LASK</option>
+
+                            <option value="FC Zürich">FC Zürich</option>
+                            <option value="Servette FC">Servette FC</option>
+                            <option value="BSC Young Boys">BSC Young Boys</option>
+
+
+                            <option value="FC Midtjylland">FC Midtjylland</option>
+                            <option value="FC Nordsjaelland">FC Nordsjaelland</option>
+                            <option value="FC Copenhagen">FC Copenhagen</option>
+
+
+                            <option value="Fenerbahce SK">Fenerbahce SK</option>
+                            <option value="Galatasaray A.S.">Galatasaray A.S.</option>
+                            <option value="Besiktas JK">Besiktas JK</option>
+                            <option value="Trabzonspor">Trabzonspor</option>
+
+
+                            <option value="Dynamo Moscow">Dynamo Moscow</option>
+                            <option value="Lokomotiv Moscow">Lokomotiv Moscow</option>
+                            <option value="Spartak Moscow">Spartak Moscow</option>
+                            <option value="Zenit St. Petersburg">Zenit St. Petersburg</option>
+                            <option value="CSKA Moscow">CSKA Moscow</option>
+
+
+                            <option value="Shakhtar Donetsk">Shakhtar Donetsk</option>
+                            <option value="Dynamo Kyiv">Dynamo Kyiv</option>
+
+
                             <option value="CA River Plate">CA River Plate</option>
+                            <option value="Club Atlético Lanús">Club Atlético Lanús</option>
+                            <option value="CA Banfield">CA Banfield</option>
+                            <option value="CA Newell's Old Boys">CA Newell's Old Boys</option>
+                            <option value="AA Argentinos Juniors">AA Argentinos Juniors</option>
+                            <option value="CA Boca Juniors">CA Boca Juniors</option>
+
+
+                            <option value="Sociedade Esportiva Palmeiras">Sociedade Esportiva Palmeiras</option>
+                            <option value="Fluminense Football Club">Fluminense Football Club</option>
+                            <option value="São Paulo Futebol Clube">São Paulo Futebol Clube</option>
+                            <option value="Sport Club Corinthians Paulista">Sport Club Corinthians Paulista</option>
+                            <option value="Santos FC">Santos FC</option>
+                            <option value="Clube de Regatas do Flamengo">Clube de Regatas do Flamengo</option>
+                            <option value="Clube Atlético Mineiro">Clube Atlético Mineiro</option>
+                            <option value="Coritiba Foot Ball Club">Coritiba Foot Ball Club</option>
+                            <option value="Botafogo de Futebol e Regatas">Botafogo de Futebol e Regatas</option>
+
+
+                            <option value="Vissel Kobe">Vissel Kobe</option>
+                            <option value="Yokohama F. Marinos">Yokohama F. Marinos</option>
+                            <option value="Sanfrecce Hiroshima">Sanfrecce Hiroshima</option>
+                            <option value="Urawa Red Diamonds">Urawa Red Diamonds</option>
+                            <option value="Kashima Antlers">Kashima Antlers</option>
+                            <option value="Nagoya Grampus Eight">Nagoya Grampus Eight</option>
+                            <option value="Avispa Fukuoka">Avispa Fukuoka</option>
+                            <option value="Kawasaki Frontale">Kawasaki Frontale</option>
+                            <option value="Cerezo Osaka">Cerezo Osaka</option>
+                            <option value="Albirex Niigata">Albirex Niigata</option>
+                            <option value="FC Tokyo">FC Tokyo</option>
+                            <option value="Consadole Sapporo">Consadole Sapporo</option>
+                            <option value="Kyoto Sanga FC">Kyoto Sanga FC</option>
+                            <option value="Sagan Tosu">Sagan Tosu</option>
+                            <option value="Shonan Bellmare">Shonan Bellmare</option>
+                            <option value="Gamba Osaka">Gamba Osaka</option>
+                            <option value="Kashiwa Reysol">Kashiwa Reysol</option>
+                            <option value="Yokohama FC">Yokohama FC</option>
+
+
+                            <option value="Machida Zelvia">Machida Zelvia</option>
+                            <option value="Júbilo Iwata">Júbilo Iwata</option>
+                            <option value="Tokyo Verdy">Tokyo Verdy</option>
+                            <option value="Shimizu S-Pulse">Shimizu S-Pulse</option>
+
+
+                            <option value="Jeonbuk Hyundai Motors">Jeonbuk Hyundai Motors</option>
+                            <option value="Incheon United">Incheon United</option>
+
+
+                            <option value="Al-Ittihad Club (Jeddah)">Al-Ittihad Club (Jeddah)</option>
+                            <option value="Al-Shabab Club (Riyadh)">Al-Shabab Club (Riyadh)</option>
+                            <option value="Al-Ahli Saudi FC">Al-Ahli Saudi FC</option>
+                            <option value="Al-Nassr Riad">Al-Nassr Riad</option>
+                            <option value="Al-Fayha FC">Al-Fayha FC</option>
+
+
+                            <option value="Al-Arabi SC">Al-Arabi SC</option>
+                            <option value="Al-Duhail SC">Al-Duhail SC</option>
+                            <option value="Al-Rayyan SC">Al-Rayyan SC</option>
+                            <option value="Al-Gharafa SC">Al-Gharafa SC</option>
+
+
+                            <option value="Al-Nasr SC (UAE)">Al-Nasr SC (UAE)</option>
+                            <option value="Al-Wahda FC Abu Dhabi">Al-Wahda FC Abu Dhabi</option>
+                            <option value="Sharjah Cultural Sports Club">Sharjah Cultural Sports Club</option>
+                            <option value="Al-Wasl Sports Club">Al-Wasl Sports Club</option>
+                            <option value="Al-Ittihad Kalba SC">Al-Ittihad Kalba SC</option>
+
+
+                            <option value="Tigres UANL">Tigres UANL</option>
+                            <option value="Club León FC">Club León FC</option>
+                            <option value="CF Monterrey">CF Monterrey</option>
+                            <option value="CF Pachuca">CF Pachuca</option>
+
+                            
+                            <option value="Los Angeles FC">Los Angeles FC</option>
+                            <option value="New York City FC">New York City FC</option>
+                            <option value="Chicago Fire FC">Chicago Fire FC</option>
+                            <option value="New England Revolution">New England Revolution</option>
+                            <option value="Colorado Rapids">Colorado Rapids</option>
+                            <option value="Inter Miami CF">Inter Miami CF</option>
+                            <option value="Austin FC">Austin FC</option>
+                            <option value="Minnesota United FC">Minnesota United FC</option>
+                            <option value="FC Cincinnati">FC Cincinnati</option>
+                            <option value="Philadelphia Union">Philadelphia Union</option>
+                            <option value="San Jose Earthquakes">San Jose Earthquakes</option>
                             
                         </select>
                     </div>
@@ -698,102 +886,292 @@
                         <select class="form-select" name="Club-to" aria-label="Select club">
                             <option value="" selected>club player will play</option>
             
-                            <option value="Real Madrid">Real Madrid</option>
-                            <option value="FC Barcelona">FC Barcelona</option>
+                            <option value="Manchester City">Manchester City</option>
                             <option value="Manchester United">Manchester United</option>
                             <option value="Liverpool FC">Liverpool FC</option>
-                            <option value="Bayern Munich">Bayern Munich</option>
-                            <option value="Paris Saint-Germain">Paris Saint-Germain</option>
-                            <option value="Juventus FC">Juventus FC</option>
-            
-                            <option value="Manchester City">Manchester City</option>
                             <option value="Arsenal FC">Arsenal FC</option>
                             <option value="Chelsea FC">Chelsea FC</option>
+                            <option value="Tottenham Hotspur">Tottenham Hotspur</option>
+                            <option value="Newcastle United">Newcastle United</option>
+                            <option value="Aston Villa">Aston Villa</option>
+                            <option value="West Ham United">West Ham United</option>
+                            <option value="Brighton & Hove Albion">Brighton & Hove Albion</option>
+                            <option value="Brentford FC">Brentford FC</option>
+                            <option value="Fulham FC">Fulham FC</option>
+                            <option value="Crystal Palace">Crystal Palace</option>
+                            <option value="Wolverhampton Wanderers">Wolverhampton Wanderers</option>
+                            <option value="AFC Bournemouth">AFC Bournemouth</option>
+                            <option value="Nottingham Forest">Nottingham Forest</option>
+                            <option value="Everton FC">Everton FC</option>
+                            <option value="Leicester City">Leicester City</option>
+                            <option value="Leeds United">Leeds United</option>
+                            <option value="Southampton FC">Southampton FC</option>
+
+                            <option value="Burnley FC">Burnley FC</option>
+                            <option value="Sheffield United">Sheffield United</option>
+                            <option value="Luton Town">Luton Town</option>
+                            <option value="Middlesbrough FC">Middlesbrough FC</option>
+                            <option value="Watford FC">Watford FC</option>
+                            <option value="Norwich City">Norwich City</option>
+
+                            <option value="Derby County">Derby County</option>
+                            <option value="Ipswich Town">Ipswich Town</option>
+                            <option value="Oxford United">Oxford United</option>
+
+                            <option value="FC Barcelona">FC Barcelona</option>
+                            <option value="Real Madrid">Real Madrid</option>
+                            <option value="Atlético de Madrid">Atlético de Madrid</option>
+                            <option value="Real Sociedad">Real Sociedad</option>
+                            <option value="Villarreal CF">Villarreal CF</option>
+                            <option value="Real Betis Balompié">Real Betis Balompié</option>
+                            <option value="CA Osasuna">CA Osasuna</option>
+                            <option value="Athletic Bilbao">Athletic Bilbao</option>
+                            <option value="Málaga CF">Málaga CF</option>
+                            <option value="Girona FC">Girona FC</option>
+                            <option value="Rayo Vallecano">Rayo Vallecano</option>
+                            <option value="Sevilla FC">Sevilla FC</option>
+                            <option value="Celta de Vigo">Celta de Vigo</option>
+                            <option value="Cadiz">Cadiz</option>
+                            <option value="Getafe CF">Getafe CF</option>
+                            <option value="Valencia CF">Valencia CF</option>
+                            <option value="UD Almería">UD Almería</option>
+                            <option value="Real Valladolid CF">Real Valladolid CF</option>
+                            <option value="RCD Espanyol Barcelona">RCD Espanyol Barcelona</option>
+                            <option value="Elche CF">Elche CF</option>
+
+                            <option value="Granada CF">Granada CF</option>
+                            <option value="Deportivo Alavés">Deportivo Alavés</option>
+                            <option value="Levante UD">Levante UD</option>
+                            <option value="SD Eibar">SD Eibar</option>
+
+                            <option value="Juventus FC">Juventus FC</option>
                             <option value="AC Milan">AC Milan</option>
                             <option value="Inter Milan">Inter Milan</option>
-                            <option value="Atlético de Madrid">Atlético de Madrid</option>
-            
-                            <option value="Tottenham Hotspur">Tottenham Hotspur</option>
                             <option value="AS Roma">AS Roma</option>
-                            <option value="Napoli">SSC Napoli</option>
+                            <option value="Napoli">Napoli</option>
+                            <option value="SS Lazio">SS Lazio</option>
+                            <option value="Atalanta BC">Atalanta BC</option>
+                            <option value="ACF Fiorentina">ACF Fiorentina</option>
+                            <option value="Bologna FC 1909">Bologna FC 1909</option>
+                            <option value="Torino FC">Torino FC</option>
+                            <option value="Monza">Monza</option>
+                            <option value="Udinese Calcio">Udinese Calcio</option>
+                            <option value="Sassuolo">Sassuolo</option>
+                            <option value="Empoli FC">Empoli FC</option>
+                            <option value="Salernitana">Salernitana</option>
+                            <option value="US Lecce">US Lecce</option>
+                            <option value="Spezia Calcio">Spezia Calcio</option>
+                            <option value="Hellas Verona">Hellas Verona</option>
+                            <option value="US Cremonese">US Cremonese</option>
+                            <option value="UC Sampdoria">UC Sampdoria</option>
+
+                            <option value="Cagliari Calcio">Cagliari Calcio</option>
+                            <option value="Genoa CFC">Genoa CFC</option>
+                            <option value="Pisa Sporting Club">Pisa Sporting Club</option>
+                            <option value="Venezia FC">Venezia FC</option>
+                            <option value="Parma Calcio 1913">Parma Calcio 1913</option>
+
+                            <option value="Bayern Munich">Bayern Munich</option>
+                            <option value="Borussia Dortmund">Borussia Dortmund</option>
+                            <option value="RB Leipzig">RB Leipzig</option>
+                            <option value="1.FC Union Berlin">1.FC Union Berlin</option>
+                            <option value="SC Freiburg">SC Freiburg</option>
+                            <option value="Bayer 04 Leverkusen">Bayer 04 Leverkusen</option>
+                            <option value="Eintracht Frankfurt">Eintracht Frankfurt</option>
+                            <option value="VfL Wolfsburg">VfL Wolfsburg</option>
+                            <option value="1. FSV Mainz 05">1. FSV Mainz 05</option>
+                            <option value="Borussia Mönchengladbach">Borussia Mönchengladbach</option>
+                            <option value="1. FC Köln">1. FC Köln</option>
+                            <option value="TSG 1899 Hoffenheim">TSG 1899 Hoffenheim</option>
+                            <option value="SV Werder Bremen">SV Werder Bremen</option>
+                            <option value="VfL Bochum">VfL Bochum</option>
+                            <option value="FC Augsburg">FC Augsburg</option>
+                            <option value="VfB Stuttgart">VfB Stuttgart</option>
+                            <option value="FC Schalke 04">FC Schalke 04</option>
+                            <option value="Hertha BSC">Hertha BSC</option>
+
+
+                            <option value="Arminia Bielefeld">Arminia Bielefeld</option>
+                            <option value="FC St. Pauli">FC St. Pauli</option>
+                            <option value="SpVgg Greuther Fürth">SpVgg Greuther Fürth</option>
+                            <option value="Hamburger SV">Hamburger SV</option>
+                            <option value="1.FC Nuremberg">1.FC Nuremberg</option>
+
+
+                            <option value="Paris Saint-Germain">Paris Saint-Germain</option>
+                            <option value="RC Lens">RC Lens</option>
+                            <option value="Olympique Marseille">Olympique Marseille</option>
+                            <option value="Stade Rennais FC">Stade Rennais FC</option>
+                            <option value="LOSC Lille">LOSC Lille</option>
+                            <option value="AS Monaco">AS Monaco</option>
+                            <option value="Olympique Lyon">Olympique Lyon</option>
+                            <option value="Clermont Foot 63">Clermont Foot 63</option>
+                            <option value="OGC Nice">OGC Nice</option>
+                            <option value="FC Lorient">FC Lorient</option>
+                            <option value="Stade Reims">Stade Reims</option>
+                            <option value="Montpellier HSC">Montpellier HSC</option>
+                            <option value="FC Toulouse">FC Toulouse</option>
+                            <option value="Stade Brestois 29">Stade Brestois 29</option>
+                            <option value="RC Strasbourg Alsace">RC Strasbourg Alsace</option>
+                            <option value="FC Nantes">FC Nantes</option>
+                            <option value="AJ Auxerre">AJ Auxerre</option>
+                            <option value="AC Ajaccio">AC Ajaccio</option>
+                            <option value="ESTAC Troyes">ESTAC Troyes</option>
+                            <option value="Angers SCO">Angers SCO</option>
+
+
                             <option value="SL Benfica">SL Benfica</option>
                             <option value="Sporting CP">Sporting CP</option>
                             <option value="FC Porto">FC Porto</option>
+                            <option value="SC Braga">SC Braga</option>
+                            <option value="Portimonense SC">Portimonense SC</option>
+                            <option value="Vitória Guimarães SC">Vitória Guimarães SC</option>
+
+
                             <option value="Ajax Amsterdam">Ajax Amsterdam</option>
-                            <option value="Borussia Dortmund">Borussia Dortmund</option>
-            
-                            <option value="Newcastle United">Newcastle United</option>
-                            <option value="West Ham United">West Ham United</option>
-                            <option value="Leicester City">Leicester City</option>
-                            <option value="Aston Villa">Aston Villa</option>
-            
-                            <option value="Sevilla FC">Sevilla FC</option>
-                            <option value="Real Sociedad">Real Sociedad</option>
-                            <option value="Villarreal CF">Villarreal CF</option>
-                            <option value="SS Lazio">SS Lazio</option>
-                            <option value="ACF Fiorentina">ACF Fiorentina</option>
-                            <option value="RB Leipzig">RB Leipzig</option>
-                            <option value="Eintracht Frankfurt">Eintracht Frankfurt</option>
-                            <option value="Bayer 04 Leverkusen">Bayer 04 Leverkusen</option>
-                            <option value="Borussia Mönchengladbach">Borussia Mönchengladbach</option>
-            
-                            <option value="Leeds United">Leeds United</option>
-                            <option value="Nottingham Forest">Nottingham Forest</option>
-                            <option value="Valencia CF">Valencia CF</option>
-                            <option value="Real Betis Balompié">Real Betis Balompié</option>
-                            <option value="Atalanta BC">Atalanta BC</option>
-                            <option value="Torino FC">Torino FC</option>
-            
-                            <option value="Wolverhampton Wanderers">Wolverhampton Wanderers</option>
-                            <option value="Brighton & Hove Albion">Brighton & Hove Albion</option>
-                            <option value="Fulham FC">Fulham FC</option>
-                            <option value="Crystal Palace">Crystal Palace</option>
-                            <option value="Southampton FC">Southampton FC</option>
-                            <option value="Brentford FC">Brentford FC</option>
-                            <option value="Hellas Verona">Hellas Verona</option>
-                            <option value="Udinese Calcio">Udinese Calcio</option>
-                            <option value="Sampdoria">UC Sampdoria</option>
-                            <option value="Sassuolo">US Sassuolo</option>
-                            <option value="Salernitana">US Salernitana 1919</option>
-                            <option value="Empoli FC">FC Empoli</option>
-                            <option value="Monza">AC Monza</option>
-                            <option value="Bologna FC 1909">Bologna FC 1909</option>
-                            <option value="Cagliari Calcio">Cagliari Calcio</option>
-            
-                            <option value="SC Freiburg">SC Freiburg</option>
-                            <option value="TSG 1899 Hoffenheim">TSG 1899 Hoffenheim</option>
-                            <option value="VfB Stuttgart">VfB Stuttgart</option>
-                            <option value="VfL Wolfsburg">VfL Wolfsburg</option>
-                            <option value="FC Schalke 04">FC Schalke 04</option>
-                            <option value="Hertha BSC">Hertha BSC</option>
-                            <option value="1. FC Köln">1. FC Köln</option>
-                            <option value="1. FSV Mainz 05">1. FSV Mainz 05</option>
-                            <option value="SV Werder Bremen">SV Werder Bremen</option>
-                            <option value="FC Augsburg">FC Augsburg</option>
-                            <option value="VfL Bochum">VfL Bochum</option>
-            
-                            <option value="Olympique Lyon">Olympique Lyon</option>
-                            <option value="Olympique Marseille">Olympique Marseille</option>
-                            <option value="Stade Rennais FC">Stade Rennais FC</option>
-                            <option value="OGC Nice">OGC Nice</option>
-                            <option value="AS Monaco">AS Monaco</option>
-                            <option value="RC Lens">RC Lens</option>
-                            <option value="RC Strasbourg Alsace">RC Strasbourg Alsace</option>
-                            <option value="FC Nantes">FC Nantes</option>
-                            <option value="Montpellier HSC">Montpellier HSC</option>
-                            <option value="FC Lorient">FC Lorient</option>
-                            <option value="FC Toulouse">FC Toulouse</option>
-                            <option value="Clermont Foot 63">Clermont Foot 63</option>
-                            <option value="ESTAC Troyes">ESTAC Troyes</option>
-                            <option value="AC Ajaccio">AC Ajaccio</option>
-                            <option value="AJ Auxerre">AJ Auxerre</option>
-                            <option value="Angers SCO">Angers SCO</option>
-                            <option value="Stade Brestois 29">Stade Brestois 29</option>
-                            <option value="Stade Reims">Stade Reims</option>
-            
                             <option value="Feyenoord Rotterdam">Feyenoord Rotterdam</option>
+                            <option value="AZ Alkmaar">AZ Alkmaar</option>
+                            <option value="FC Groningen">FC Groningen</option>
+                            <option value="PSV Eindhoven">PSV Eindhoven</option>
+                            <option value="FC Utrecht">FC Utrecht</option>
+
+
                             <option value="Club Brugge KV">Club Brugge KV</option>
+                            <option value="KV Oostende">KV Oostende</option>
+                            <option value="RSC Anderlecht">RSC Anderlecht</option>
+                            <option value="KRC Genk">KRC Genk</option>
+                            <option value="RSC Charleroi">RSC Charleroi</option>
+
+                            <option value="Rangers FC">Rangers FC</option>
+                            <option value="Celtic FC">Celtic FC</option>
+
+                            <option value="Olympiacos Piraeus">Olympiacos Piraeus</option>
+                            <option value="Aris Thessaloniki">Aris Thessaloniki</option>
+                            <option value="AEK Athens">AEK Athens</option>
+                            <option value="PAOK Thessaloniki">PAOK Thessaloniki</option>
+
+                            <option value="AC Sparta Prague">AC Sparta Prague</option>
+                            <option value="SK Slavia Prague">SK Slavia Prague</option>
+                            <option value="FC Viktoria Plzen">FC Viktoria Plzen</option>
+
+                            <option value="Red Bull Salzburg">Red Bull Salzburg</option>
+                            <option value="SK Sturm Graz">SK Sturm Graz</option>
+                            <option value="Rapid Vienna">Rapid Vienna</option>
+                            <option value="LASK">LASK</option>
+
+                            <option value="FC Zürich">FC Zürich</option>
+                            <option value="Servette FC">Servette FC</option>
+                            <option value="BSC Young Boys">BSC Young Boys</option>
+
+
+                            <option value="FC Midtjylland">FC Midtjylland</option>
+                            <option value="FC Nordsjaelland">FC Nordsjaelland</option>
+                            <option value="FC Copenhagen">FC Copenhagen</option>
+
+
+                            <option value="Fenerbahce SK">Fenerbahce SK</option>
+                            <option value="Galatasaray A.S.">Galatasaray A.S.</option>
+                            <option value="Besiktas JK">Besiktas JK</option>
+                            <option value="Trabzonspor">Trabzonspor</option>
+
+
+                            <option value="Dynamo Moscow">Dynamo Moscow</option>
+                            <option value="Lokomotiv Moscow">Lokomotiv Moscow</option>
+                            <option value="Spartak Moscow">Spartak Moscow</option>
+                            <option value="Zenit St. Petersburg">Zenit St. Petersburg</option>
+                            <option value="CSKA Moscow">CSKA Moscow</option>
+
+
+                            <option value="Shakhtar Donetsk">Shakhtar Donetsk</option>
+                            <option value="Dynamo Kyiv">Dynamo Kyiv</option>
+
+
                             <option value="CA River Plate">CA River Plate</option>
+                            <option value="Club Atlético Lanús">Club Atlético Lanús</option>
+                            <option value="CA Banfield">CA Banfield</option>
+                            <option value="CA Newell's Old Boys">CA Newell's Old Boys</option>
+                            <option value="AA Argentinos Juniors">AA Argentinos Juniors</option>
+                            <option value="CA Boca Juniors">CA Boca Juniors</option>
+
+
+                            <option value="Sociedade Esportiva Palmeiras">Sociedade Esportiva Palmeiras</option>
+                            <option value="Fluminense Football Club">Fluminense Football Club</option>
+                            <option value="São Paulo Futebol Clube">São Paulo Futebol Clube</option>
+                            <option value="Sport Club Corinthians Paulista">Sport Club Corinthians Paulista</option>
+                            <option value="Santos FC">Santos FC</option>
+                            <option value="Clube de Regatas do Flamengo">Clube de Regatas do Flamengo</option>
+                            <option value="Clube Atlético Mineiro">Clube Atlético Mineiro</option>
+                            <option value="Coritiba Foot Ball Club">Coritiba Foot Ball Club</option>
+                            <option value="Botafogo de Futebol e Regatas">Botafogo de Futebol e Regatas</option>
+
+
+                            <option value="Vissel Kobe">Vissel Kobe</option>
+                            <option value="Yokohama F. Marinos">Yokohama F. Marinos</option>
+                            <option value="Sanfrecce Hiroshima">Sanfrecce Hiroshima</option>
+                            <option value="Urawa Red Diamonds">Urawa Red Diamonds</option>
+                            <option value="Kashima Antlers">Kashima Antlers</option>
+                            <option value="Nagoya Grampus Eight">Nagoya Grampus Eight</option>
+                            <option value="Avispa Fukuoka">Avispa Fukuoka</option>
+                            <option value="Kawasaki Frontale">Kawasaki Frontale</option>
+                            <option value="Cerezo Osaka">Cerezo Osaka</option>
+                            <option value="Albirex Niigata">Albirex Niigata</option>
+                            <option value="FC Tokyo">FC Tokyo</option>
+                            <option value="Consadole Sapporo">Consadole Sapporo</option>
+                            <option value="Kyoto Sanga FC">Kyoto Sanga FC</option>
+                            <option value="Sagan Tosu">Sagan Tosu</option>
+                            <option value="Shonan Bellmare">Shonan Bellmare</option>
+                            <option value="Gamba Osaka">Gamba Osaka</option>
+                            <option value="Kashiwa Reysol">Kashiwa Reysol</option>
+                            <option value="Yokohama FC">Yokohama FC</option>
+
+
+                            <option value="Machida Zelvia">Machida Zelvia</option>
+                            <option value="Júbilo Iwata">Júbilo Iwata</option>
+                            <option value="Tokyo Verdy">Tokyo Verdy</option>
+                            <option value="Shimizu S-Pulse">Shimizu S-Pulse</option>
+
+
+                            <option value="Jeonbuk Hyundai Motors">Jeonbuk Hyundai Motors</option>
+                            <option value="Incheon United">Incheon United</option>
+
+
+                            <option value="Al-Ittihad Club (Jeddah)">Al-Ittihad Club (Jeddah)</option>
+                            <option value="Al-Shabab Club (Riyadh)">Al-Shabab Club (Riyadh)</option>
+                            <option value="Al-Ahli Saudi FC">Al-Ahli Saudi FC</option>
+                            <option value="Al-Nassr Riad">Al-Nassr Riad</option>
+                            <option value="Al-Fayha FC">Al-Fayha FC</option>
+
+
+                            <option value="Al-Arabi SC">Al-Arabi SC</option>
+                            <option value="Al-Duhail SC">Al-Duhail SC</option>
+                            <option value="Al-Rayyan SC">Al-Rayyan SC</option>
+                            <option value="Al-Gharafa SC">Al-Gharafa SC</option>
+
+
+                            <option value="Al-Nasr SC (UAE)">Al-Nasr SC (UAE)</option>
+                            <option value="Al-Wahda FC Abu Dhabi">Al-Wahda FC Abu Dhabi</option>
+                            <option value="Sharjah Cultural Sports Club">Sharjah Cultural Sports Club</option>
+                            <option value="Al-Wasl Sports Club">Al-Wasl Sports Club</option>
+                            <option value="Al-Ittihad Kalba SC">Al-Ittihad Kalba SC</option>
+
+
+                            <option value="Tigres UANL">Tigres UANL</option>
+                            <option value="Club León FC">Club León FC</option>
+                            <option value="CF Monterrey">CF Monterrey</option>
+                            <option value="CF Pachuca">CF Pachuca</option>
+
+                            
+                            <option value="Los Angeles FC">Los Angeles FC</option>
+                            <option value="New York City FC">New York City FC</option>
+                            <option value="Chicago Fire FC">Chicago Fire FC</option>
+                            <option value="New England Revolution">New England Revolution</option>
+                            <option value="Colorado Rapids">Colorado Rapids</option>
+                            <option value="Inter Miami CF">Inter Miami CF</option>
+                            <option value="Austin FC">Austin FC</option>
+                            <option value="Minnesota United FC">Minnesota United FC</option>
+                            <option value="FC Cincinnati">FC Cincinnati</option>
+                            <option value="Philadelphia Union">Philadelphia Union</option>
+                            <option value="San Jose Earthquakes">San Jose Earthquakes</option>
                             
                         </select>
                     </div>
