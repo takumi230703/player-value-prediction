@@ -25,7 +25,7 @@ def profile():
 
 @app.route("/display", methods=["GET"])
 def display():
-    db = MySQLdb.connect(host="crossover.proxy.rlwy.net", user="root", password="KwYuMImClJcsGTEJTmuDGStRoHVzzeSZ", database="railway")
+    db = MySQLdb.connect(host="localhost", user="root", password="", database="playerdb")
     cursor = db.cursor()
     
     cursor.execute("SELECT * FROM players")
@@ -39,7 +39,7 @@ def display():
 
 @app.route("/delete/<int:player_id>")
 def delete(player_id):
-    db = MySQLdb.connect(host="crossover.proxy.rlwy.net", user="root", password="KwYuMImClJcsGTEJTmuDGStRoHVzzeSZ", database="railway")
+    db = MySQLdb.connect(host="localhost", user="root", password="", database="playerdb")
     cursor = db.cursor()
     
     
@@ -56,7 +56,7 @@ def delete(player_id):
 @app.route("/update/<int:player_id>", methods=["GET", "POST"])
 def update(player_id):
     soccer_model = joblib.load("soccer_model.pkl")
-    db = MySQLdb.connect(host="crossover.proxy.rlwy.net", user="root", password="KwYuMImClJcsGTEJTmuDGStRoHVzzeSZ", database="railway")
+    db = MySQLdb.connect(host="localhost", user="root", password="", database="playerdb")
     cursor = db.cursor()
     
     cursor.execute("SELECT * FROM players WHERE id=%s", (player_id, ))
@@ -124,7 +124,7 @@ def update(player_id):
     
 @app.route("/player/<int:player_id>", methods=["GET"])
 def player(player_id):
-    db = MySQLdb.connect(host="crossover.proxy.rlwy.net", user="root", password="KwYuMImClJcsGTEJTmuDGStRoHVzzeSZ", database="railway")
+    db = MySQLdb.connect(host="localhost", user="root", password="", database="playerdb")
     cursor = db.cursor()
     
     cursor.execute("SELECT * FROM players WHERE id=%s", (player_id, ))
@@ -142,7 +142,7 @@ def player(player_id):
 @app.route("/card", methods=["POST"])
 def card():
     soccer_model = joblib.load("soccer_model.pkl")
-    db = MySQLdb.connect(host="crossover.proxy.rlwy.net", user="root", password="KwYuMImClJcsGTEJTmuDGStRoHVzzeSZ", database="railway")
+    db = MySQLdb.connect(host="localhost", user="root", password="", database="playerdb")
     cursor = db.cursor()
 
     first_name = request.form["First_Name"]
