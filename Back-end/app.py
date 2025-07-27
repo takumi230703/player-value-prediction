@@ -8,11 +8,13 @@ import os
 BASE_DIR = os.path.dirname(os.path.abspath(__file__))
 TEMPLATE_DIR = os.path.join(BASE_DIR, "../Front-end/templates")
 STATIC_PATH = os.path.join(BASE_DIR, "../Front-end/static")
-
+DB_PATH = os.path.join(BASE_DIR, "playerdb.sqlite")
+MODEL_PATH = os.path.join(BASE_DIR, "soccer_model.pkl")
+ENCODER_PATH = os.path.join(BASE_DIR, "one_hot_encoder.pkl")
 
 app = Flask(__name__, template_folder=TEMPLATE_DIR, static_folder=STATIC_PATH)
 
-db = sqlite3.connect("playerdb.sqlite")
+db = sqlite3.connect(DB_PATH)
 cursor = db.cursor()
 
 cursor.execute("""
@@ -47,7 +49,7 @@ def profile():
 
 @app.route("/display", methods=["GET"])
 def display():
-    db = sqlite3.connect("playerdb.sqlite")
+    db = sqlite3.connect(DB_PATH)
     cursor = db.cursor()
     
     cursor.execute("SELECT * FROM players")
@@ -61,7 +63,7 @@ def display():
 
 @app.route("/delete/<int:player_id>")
 def delete(player_id):
-    db = sqlite3.connect("playerdb.sqlite")
+    db = sqlite3.connect(DB_PATH)
     cursor = db.cursor()
     
     
@@ -77,8 +79,8 @@ def delete(player_id):
 
 @app.route("/update/<int:player_id>", methods=["GET", "POST"])
 def update(player_id):
-    soccer_model = joblib.load("soccer_model.pkl")
-    db = sqlite3.connect("playerdb.sqlite")
+    soccer_model = joblib.load(MODEL_PATH)
+    db = sqlite3.connect(DB_PATH)
     cursor = db.cursor()
     
     cursor.execute("SELECT * FROM players WHERE id=?", (player_id, ))
@@ -119,7 +121,7 @@ def update(player_id):
             "club_to": [club_to]
         })
 
-        OH_encoder = joblib.load("one_hot_encoder.pkl")
+        OH_encoder = joblib.load(ENCODER_PATH)
         OH_data_frame = pd.DataFrame(OH_encoder.transform(data_frame))
 
         OH_data_frame.index = data_frame.index
@@ -146,7 +148,7 @@ def update(player_id):
     
 @app.route("/player/<int:player_id>", methods=["GET"])
 def player(player_id):
-    db = sqlite3.connect("playerdb.sqlite")
+    db = sqlite3.connect(DB_PATH)
     cursor = db.cursor()
     
     cursor.execute("SELECT * FROM players WHERE id=?", (player_id, ))
@@ -163,8 +165,8 @@ def player(player_id):
 
 @app.route("/card", methods=["POST"])
 def card():
-    soccer_model = joblib.load("soccer_model.pkl")
-    db = sqlite3.connect("playerdb.sqlite")
+    soccer_model = joblib.load(MODEL_PATH)
+    db = sqlite3.connect(DB_PATH)
     cursor = db.cursor()
 
     first_name = request.form["First_Name"]
@@ -206,7 +208,7 @@ def card():
         "club_to": [club_to]
     })
 
-    OH_encoder = joblib.load("one_hot_encoder.pkl")
+    OH_encoder = joblib.load(ENCODER_PATH)
     OH_data_frame = pd.DataFrame(OH_encoder.transform(data_frame))
 
     OH_data_frame.index = data_frame.index
