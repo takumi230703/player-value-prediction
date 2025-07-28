@@ -231,3 +231,5 @@ def card():
 
     return render_template("card.html", first_name=first_name, last_name=last_name, picture_url=picture_url, prediction=prediction)
 
+if __name__=="__main__":
+    app.run()
