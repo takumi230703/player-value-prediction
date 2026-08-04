@@ -9,7 +9,10 @@ Soccer Transfer Fee Prediction
 
 - **Update Feature** Users can access player information and update it.
 
-- **Delete Feature** Users can also delete information if they don't need it. 
+- **Delete Feature** Users can also delete information if they don't need it.
+
+## URL
+takumi230703.pythonanywhere.com
 
   
 ## Getting Started
