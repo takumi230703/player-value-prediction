@@ -1,6 +1,9 @@
 # player-value-prediction
 Soccer Transfer Fee Prediction
 
+## URL
+takumi230703.pythonanywhere.com
+
 ## Key Features
 
 - **Predict soccer player market values** The machine learning model predicts market values from age, position, the former club, and the next club.
@@ -11,8 +14,7 @@ Soccer Transfer Fee Prediction
 
 - **Delete Feature** Users can also delete information if they don't need it.
 
-## URL
-takumi230703.pythonanywhere.com
+
 
   
 ## Getting Started
